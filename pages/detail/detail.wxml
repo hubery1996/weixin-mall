@@ -1,0 +1,333 @@
+<!-- 轮播图 -->
+<swiper 
+indicator-dots="{{indicatorDots}}" 
+autoplay="{{autoplay}}"
+ interval="{{interval}}" 
+ duration="{{duration}}"
+ >
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 轮播图结束 -->
+<!-- 头部产品信息 -->
+<view class="product-title">
+  <view class='ul'>
+    <view class='li'>
+      <view class="title-wrap">
+        <view class="title">忘情巴黎-33枝红玫瑰
+          <span class="color">浪漫唯美 女神挚爱</span>
+        </view>
+        <view class="sub-title"></view>
+      </view>
+    </view>
+    <view class='li'>
+      <i class="iconfont iconfont-collect"></i>
+    </view>
+  </view>
+  <view class='ul'>
+    <view class='li'>
+      <view class="price-wrap">
+        <span class="price color">¥328</span>
+        <span class="through">¥383</span>
+      </view>
+    </view>
+    <view class='li'>
+      <view class="num">已售
+        <span>4.48万</span>件</view>
+    </view>
+  </view>
+</view>
+<view class="app">
+  <view class="left-wrap">
+    <i class="iconfont iconfont-iphone"></i>
+    <span>APP下单立减7元</span>
+  </view>
+  <i class="iconfont iconfont-arrow-right"></i>
+</view>
+<view class="space"></view>
+<!-- 头部产品信息结束 -->
+<!-- floor-1 -->
+<view class="floor-1">
+  <view class='ul'>
+    <view class='li'>
+      <span class="title">花语</span>
+      <span class="text">只想和你忘掉一切烦恼，尽情沉醉在最浪漫的气氛中。</span>
+    </view>
+    <view class='li'>
+      <span class="title">材料</span>
+      <span class="text">33枝红玫瑰，石竹梅20枝</span>
+    </view>
+    <view class='li'>
+      <span class="title">配送</span>
+      <span class="text">全国</span>
+    </view>
+  </view>
+</view>
+<view class="space"></view>
+<!-- floor-1结束 -->
+<!-- floor-2 -->
+<view class="floor-1">
+  <view class='ul'>
+    <view class='li'>
+      <span class="title">已选</span>
+      <span class="text">忘情巴黎
+        <i class="iconfont iconfont-more1"></i>
+      </span>
+    </view>
+    <view class='li'>
+      <span class="title">配送至</span>
+      <span class="text">
+        <i class="iconfont iconfont-address"></i>请选择配送地区
+        <i class="iconfont iconfont-more1"></i>
+      </span>
+    </view>
+  </view>
+</view>
+<view class="space"></view>
+<!-- floor-2结束 -->
+<!-- floor-3 -->
+<view class="floor-3">
+  <view class='ul'>
+    <view class='li'>
+      <view class="title">订单评价</view>
+    </view>
+    <view class='li'>
+      <navigator url="#">最近已有1970条评价
+        <i class="iconfont iconfont-arrow-right"></i>
+      </navigator>
+    </view>
+  </view>
+
+</view>
+<!-- floor-3结束 -->
+<!-- 评论区 -->
+<view class="comment">
+  <view class="head-info">
+    <view class="head-photo">
+      <image src="/images/detail/132.jpg"></image>
+      <view class="name">T********o</view>
+    </view>
+    <view class="star-wrap">
+      <image src="/images/detail/star5.png"></image>
+    </view>
+  </view>
+  <view class="content">
+    <view class="title">花十分漂亮服務很好</view>
+    <navigator url="#">
+      <image src="/images/detail/8a6565dc6f824096a891b35859898ddf.jpg"></image>
+    </navigator>
+    <view class="site">
+      <i class="iconfont iconfont-address"></i>广东深圳市福田区</view>
+  </view>
+</view>
+<view class="comment">
+  <view class="head-info">
+    <view class="head-photo">
+      <image src="/images/detail/132.jpg"></image>
+      <view class="name">愈*******凉</view>
+    </view>
+    <view class="star-wrap">
+      <image src="/images/detail/star5.png"></image>
+    </view>
+  </view>
+  <view class="content">
+    <view class="title">花十分漂亮服務很好</view>
+    <navigator url="#">
+      <image src="/images/detail/de555c84549e4977a09cc472d5ff7073.jpg"></image>
+    </navigator>
+    <view class="site">
+      <i class="iconfont iconfont-address"></i>广东广州市番禺区</view>
+  </view>
+</view>
+<view class="comment">
+  <view class="head-info">
+    <view class="head-photo">
+      <image src="/images/detail/132.jpg"></image>
+      <view class="name">T********o</view>
+    </view>
+    <view class="star-wrap">
+      <image src="/images/detail/star5.png"></image>
+    </view>
+  </view>
+  <view class="content">
+    <view class="title">花很漂亮，送在外的老婆，没毛病</view>
+    <navigator url="#">
+      <image src="/images/detail/de555c84549e4977a09cc472d5ff7073.jpg"></image>
+    </navigator>
+    <view class="site">
+      <i class="iconfont iconfont-address">江苏苏州市吴江区</i>
+    </view>
+  </view>
+</view>
+<view class="more-wrap">
+  <navigator url="#more">
+    <view class="more">查看更多评价</view>
+  </navigator>
+</view>
+<view class="space"></view>
+<!-- 评论区结束 -->
+<!-- 选择我们 -->
+<view class="choose-us">
+  <view class="title">
+    为什么选择我们
+  </view>
+  <view class='ul'>
+    <view class='li'>
+      <view class="img-wrap">
+        <image src="/images/detail/m_details_brand_01.png"></image>
+      </view>获评鲜花龙头企业
+    </view>
+    <view class='li'>
+      <view class="img-wrap">
+        <image src="/images/detail/m_details_brand_02.png"></image>
+      </view>当日新鲜花材制作
+    </view>
+    <view class='li'>
+      <view class="img-wrap">
+        <image src="/images/detail/m_details_brand_03.png"></image>
+      </view>赛事冠军花艺师团队
+    </view>
+  </view>
+  <view class='ul'>
+    <view class='li'>
+      <view class="img-wrap">
+        <image src="/images/detail/m_details_brand_04.png"></image>
+      </view>严选花材
+    </view>
+    <view class='li'>
+      <view class="img-wrap">
+        <image src="/images/detail/m_details_brand_05.png"></image>
+      </view>12道严苛品控标准
+    </view>
+    <view class='li'>
+      <view class="img-wrap">
+        <image src="/images/detail/m_details_brand_06.png"></image>
+      </view>500万用户信赖好评
+    </view>
+  </view>
+</view>
+
+<!-- 选择我们结束 -->
+<!-- 图文详情 -->
+<view class="img-text-info">
+  <view class="floor-3">
+    <view class='ul'>
+      <view class='li'>
+        <view class="title">图文详情</view>
+      </view>
+    </view>
+  </view>
+  <image src="/images/detail/by_20180611134635481.jpg"></image>
+  <image src="/images/detail/by_20180702095709936.jpg"></image>
+  <image src="/images/detail/2015420174953899997.jpg"></image>
+  <image src="/images/detail/20151223184607197772.jpg"></image>
+  <image src="/images/detail/20151223184694302325.jpg"></image>
+  <image src="/images/detail/2015420175007241855.jpg"></image>
+  <image src="/images/detail/by_20180719135050502.jpg"></image>
+  <image src="/images/detail/xianhua_cardstyle.jpg"></image>
+  <view class="well">
+    <view class="title">
+      <view class="text">龙头企业认证·14年品牌</view>
+      始于2005，多次获中国电子商务协会“鲜花龙头企业”认证。
+    </view>
+    <view class="img-wrap">
+      <image src="/images/detail/m_details_point_01.png"></image>
+    </view>
+  </view>
+  <view class="well">
+    <view class="title">
+      <view class="text">12道品控标准 + 送前实拍</view>
+      行业内率先研发并实施12道严苛品控标准：从花材采购、制作、成品、配送、售后全程覆盖，将产品及服务标准化；每束花均实拍回传总部审核，符合品控标准方可送出。
+    </view>
+    <view class="img-wrap">
+      <image src="/images/detail/m_details_point_02.png"></image>
+    </view>
+  </view>
+  <view class="well">
+    <view class="title">
+      <view class="text">花艺设计团队</view>
+      国内领先的原创花艺：中国花艺博览会赛事冠军花艺师打造团队，坚持原创设计，创作花款迄今已畅销千万束。
+    </view>
+    <view class="img-wrap">
+      <image src="/images/detail/m_details_point_03.png"></image>
+    </view>
+  </view>
+  <view class="well">
+    <view class="title">
+      <view class="text">当日新鲜花材制作，极速送达</view>
+      门店覆盖全国2000+城市，鲜花皆由当地门店花艺师在配送当日使用新鲜A级花材制作，确保鲜花娇艳欲滴！并由专人专车送货上门，最快1小时送达，快人一步！
+    </view>
+    <view class="img-wrap">
+      <image src="/images/detail/m_details_point_04.png"></image>
+    </view>
+  </view>
+  <view class="well">
+    <view class="title">
+      <view class="text">客服团队</view>
+      建设一支较其他电商更大规模的客服团队，将常规客服升级为售前订花顾问、售中专人跟单、售后快速响应的一站式管家客服模式。
+    </view>
+    <view class="img-wrap">
+      <image src="/images/detail/m_details_point_05.png"></image>
+    </view>
+  </view>
+  <view class="well">
+    <view class="title">
+      <view class="text">优秀平台汇聚优秀人才</view>
+      我们相信优秀的平台环境可以吸引同样气质、热爱花礼行业的优秀人才。
+    </view>
+    <view class="img-wrap">
+      <image src="/images/detail/m_details_point_06.png"></image>
+    </view>
+  </view>
+  <view class="well">
+    <view class="title">
+      <view class="text">不只鲜花 · 跨界音乐微电影</view>
+      联合GIMC打造“勇敢爱”系列原创微电影、赞助《不要音乐》大型音乐旅行节目，全网播放超5000万次。
+    </view>
+    <view class="img-wrap">
+      <image src="/images/detail/m_details_point_07.png"></image>
+    </view>
+  </view>
+</view>
+<!-- 图文详情结束 -->
+<!-- 底部购物车 -->
+<view class="cart-bottom">
+  <view class='ul'>
+    <view class='li'>
+      <navigator url="#">
+        <view class="info">
+          <i class="iconfont iconfont-sevice"></i>客服</view>
+      </navigator>
+    </view>
+    <view class='li'>
+      <navigator url="#">
+        <view class="info">
+          <i class="iconfont iconfont-shopcart"></i>购物车</view>
+      </navigator>
+    </view>
+    <view class='li'>
+      <navigator url="../cart/cart.html">
+        <view class="add-cart">加入购物车</view>
+      </navigator>
+    </view>
+    <view class='li'>
+      <navigator url="../order/order.html">
+        <view class="pay-now">立即购买</view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<!-- 底部购物车结束 -->
+<!-- 返回顶部 -->
+<view class="back-top">
+  <i class="iconfont iconfont-top"></i>
+</view>
+<!-- 返回顶部结束 -->
+
+<!-- 遮罩 -->
+<view class="shade-wrap">
+</view>
+<!-- 遮罩结束 -->

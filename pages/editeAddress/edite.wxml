@@ -1,0 +1,97 @@
+<view class="hidden">
+	<view class='ul'>
+		<view class='li'>
+			<navigator url="../index/index.html">
+				<image src="/images/address/home_icon_new.png"></image>
+				<view class="text">首页</view>
+			</navigator>
+		</view>
+		<view class='li'>
+			<navigator url="../classify/classify.html">
+				<image src="/images/address/classify_icon_new.png"></image>
+				<view class="text">分类</view>
+			</navigator>
+		</view>
+		<view class='li'>
+			<view class="cart-num">
+				<navigator url="../cart/cart.html">
+					<image src="/images/address/cart_icon_new.png"></image>
+					<view class="text">购物车
+						<view class="text-num">0</view>
+					</view>
+				</navigator>
+			</view>
+		</view>
+		<view class='li'>
+			<navigator url="../myCenter/myCenter.html">
+				<image src="/images/address/my_icon_new.png"></image>
+				<view class="text">我的</view>
+			</navigator>
+		</view>
+	</view>
+</view>
+
+<!-- 收货人 -->
+<view class="address-main">
+	<view class="add-item">
+		<view class="addleft">
+			收货人:
+		</view>
+		<view class="addright">
+			<input type="text" name="" id="name" placeholder="请填写收货人真实姓名,避免无法配送" bindinput="nameInput" value="{{formData.name}}" />
+		</view>
+	</view>
+	<!-- 手机号码 -->
+	<view class="add-item">
+		<view class="addleft">
+			手机号码:
+		</view>
+		<view class="addright">
+			<input type="number" name="" id="phone" placeholder="收货人手机号码" bindinput="telInput" value="{{formData.tel}}" />
+		</view>
+	</view>
+	<!-- 手机号码 -->
+	<view class="add-item">
+		<view class="addleft">
+			邮编：
+		</view>
+		<view class="addright">
+			<input type="number" name="" id="code" placeholder="请填写邮编" bindinput="codeInput" value="{{formData.code}}" />
+		</view>
+	</view>
+	<!-- 省市区 -->
+	<view class="add-item province">
+		<view class="addleft">
+			所在地区：
+		</view>
+		<view class="addright">
+			<view class="section">
+				<picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+					<view class="picker">
+						{{region[0]}}，{{region[1]}}，{{region[2]}}
+					</view>
+				</picker>
+			</view>
+		</view>
+		<view class="province-pic">
+			<text>
+			</text>
+		</view>
+	</view>
+	<!--详细地址 -->
+	<view class="add-item minute">
+		<view class="addleft">
+			详细地址:
+		</view>
+		<view class="addright">
+			<input type="number" name="" id="code" placeholder="收货人详细地址" bindinput="streetInput" value="{{formData.street}}" />
+		</view>
+		<view class="minute-pic">
+		</view>
+	</view>
+</view>
+
+<!-- 保存地址 -->
+<view class="address-save">
+		<view class="save" bindtap="saveHandle">保存并使用</view>
+</view>

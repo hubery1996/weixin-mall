@@ -1,0 +1,41 @@
+/* pages/text/index.wxss */
+.avatar{
+	width: 160rpx;
+	height: 160rpx;
+	border-radius: 5rpx;
+	margin: 0 auto;
+	text-align: center;
+}
+.nickname{
+	text-align: center;
+}
+.shadow{
+	background: rgba(0,0,0,.5);
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	display: flex;
+}
+.authModel{
+	background: white;
+	margin: auto;
+	width: 100vw;
+	text-align: center;
+}
+.authModel .title{
+	padding: 0.5em 0;
+	position: relative;
+}
+.authModel .title::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
+	height: 1px;
+	left: 0;
+	background: #eee;
+}
+.authModel .body{
+	margin: 20rpx 0;
+}

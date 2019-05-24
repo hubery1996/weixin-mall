@@ -1,0 +1,27 @@
+<view class="site">
+	<navigator url="../address/address">+ 添加收货人地址</navigator>
+</view>
+<view class="site-info" wx:for="{{list}}" wx:key="{{index}}">
+	<view class="info-left">
+		<view class="col-1">
+			<text class="name">{{item.name}}</text>
+			<text class="phone-num">{{item.tel}}</text>
+			<text class="default">默认</text>
+		</view>
+		<view class="col-2">
+			<text class="adress">{{item.province}} {{item.city}} {{item.area}}</text>
+			<text class="detail-adress">street</text>
+		</view>
+	</view>
+	<view class="info-right">
+		<view class="edit">
+			<navigator url='../editeAddress/edite?id={{item.id}}'>
+			<i class="iconfont iconfont-edit"></i>
+			</navigator>
+			</view>
+		<view class="delete" data-id="{{item.id}}" bindtap="showDeleteModal">
+			<i class="iconfont iconfont-delete"></i>
+		</view>
+	</view>
+
+</view>

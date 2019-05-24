@@ -1,0 +1,162 @@
+/* 头部搜索 */
+.header {
+	justify-content: space-between;
+	height: 9.31vw;
+	line-height: 9.31vw;
+	width: 100vw;
+	display: flex;
+	padding: 1.14vw 0;
+	text-align: center;
+	background: rgba(250, 250, 250, 0.9);
+	position: relative;
+	font-size: 3.86vw;
+
+}
+
+.hidden .li .cart-num {
+	position: relative;
+}
+
+.hidden .li .text-num {
+	position: navigatorbsolute;
+	top: -1vw;
+	right: -1vw;
+	width: 3.2vw;
+	height: 3.2vw;
+	border-radius: 50%;
+	line-height: 3.2vw;
+	text-align: center;
+	font-size: 2.89vw;
+	color: white;
+	background-color: #FE6600;
+}
+
+.header navigator {
+
+	width: 11.59vw;
+	display: inline-block;
+	line-height: 8.11vw;
+	height: 8.11vw;
+}
+
+.header navigator i {
+	font-size: 4.79vw;
+}
+
+.header .iconfont-icon_menu {
+	background: url(images/iconMore@2x.png) no-repeat center center;
+	display: inline-block;
+	width: 5.79vw;
+	height: 5.79vw;
+	background-size: 5.79vw 5.79vw;
+	vertical-align: middle;
+}
+
+.hidden {
+	position: relative;
+	display: none;
+}
+
+.hidden::after {
+	content: "";
+	display: inline-block;
+	width: 100vw;
+	height: 0.2vw;
+	background: #f2f3f5;
+	position: navigatorbsolute;
+	bottom: 0;
+	left: 0;
+}
+
+.hidden image {
+	width: 4.83vw;
+	height: 4.83vw;
+}
+
+.hidden .ul {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 8vw;
+}
+
+.hidden .li {
+	font-size: 2.5vw;
+	width: 10vw;
+	text-align: center;
+	padding: 1vw 0;
+}
+
+html,
+body {
+	background: #F0F0F0;
+}
+
+/* 添加收货地址 */
+.site navigator {
+	width: 95.16vw;
+	height: 8.69vw;
+	font-size: 3.62vw;
+	border: 1px solid #FF6600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #FF6600;
+}
+
+.site {
+	background: white;
+	padding: 4.34vw 2.41vw;
+}
+
+.site-info {
+	display: flex;
+	justify-content: space-between;
+	background: white;
+	padding: 2.41vw;
+  margin: 2.41vw;
+	font-size: 3.62vw;
+  border-radius: 10rpx;
+}
+
+.site-info .phone-num {
+	padding-left: 3vw;
+}
+
+.site-info .name,
+.site-info .phone-num {
+	font-weight: 600;
+}
+.site-info .info-right{
+	display: flex;
+	align-items: center;
+}
+.site-info .info-right view{
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	height: 6vw;
+	margin-left: 5vw;
+}
+.col-2 {
+	font-size: 3.38vw;
+	display: flex;
+	align-items: center;
+	padding: 1.2vw 0;
+}
+
+.default {
+	background: #f60;
+	color: white;
+	font-size: 2.5vw;
+	text-align: center;
+	height: 3vw;
+	line-height: 3vw;
+	border-radius: 2vw;
+	padding: 0 1.2vw;
+	margin-left: 3vw;
+}
+
+
+page {
+	background: #F0F0F0;
+}

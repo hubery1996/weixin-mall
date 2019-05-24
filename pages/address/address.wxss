@@ -1,0 +1,338 @@
+page{
+  background: #F0F0F0;
+}
+
+navigator {
+	text-decoration: none;
+	color: black;
+}
+
+.relative {
+	position: relative;
+}
+
+.ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.address-project {
+	background-color: #f5f5f5;
+}
+
+/* 头部搜索 */
+.header {
+	justify-content: space-between;
+	height: 9.31vw;
+	line-height: 9.31vw;
+	width: 100vw;
+	display: flex;
+	padding: 1.14vw 0;
+	text-align: center;
+	background: rgba(250, 250, 250, 0.9);
+	position: relative;
+
+}
+
+.hidden .li .cart-num {
+	position: relative;
+}
+
+.hidden .li .text-num {
+	position: absolute;
+	top: -1vw;
+	right: -1vw;
+	width: 3.2vw;
+	height: 3.2vw;
+	border-radius: 50%;
+	line-height: 3.2vw;
+	text-align: center;
+	font-size: 2.89vw;
+	color: white;
+	background-color: #FE6600;
+}
+
+.header navigator {
+	width: 11.59vw;
+	display: inline-block;
+	line-height: 8.11vw;
+	height: 8.11vw;
+}
+
+.header .iconfont-icon_menu {
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAHNJREFUaAXt1cENgCAMBVDqdui8ynjqBHBqIORxbdOS18MvxSNAgAABAgQIECAwSyBGi2ut999zjvqS6k9r7erNPnrF2bWIeGf/wX4CBAgQWFtAEmfeRxJn6ppNgACBPQQkceYdJXGmrtkECBAgQIDADgIfCHISEHs1Sg0AAAAASUVORK5CYII=) no-repeat center center;
+	display: inline-block;
+	width: 5vw;
+	height: 5vw;
+	background-size: 5vw 5vw;
+	vertical-align: middle;
+}
+
+.hidden {
+	position: relative;
+	display: none;
+}
+
+.hidden::after {
+	content: "";
+	display: inline-block;
+	width: 100vw;
+	height: 0.2vw;
+	background: #f2f3f5;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.hidden image {
+	width: 4.83vw;
+	height: 4.83vw;
+}
+
+.hidden .ul {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 8vw;
+}
+
+.hidden .li {
+	font-size: 2.5vw;
+	width: 10vw;
+	text-align: center;
+	padding: 1vw 0;
+}
+
+
+
+/* 收货人 */
+/* 最外层 */
+.address-main {
+	margin: 1.93vw;
+	box-sizing: border-box;
+	background-color: #fff;
+}
+
+/* 收货人 */
+.address-main .add-item {
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	padding: 3vw 0;
+	border-bottom: 0.27vw solid #eeeeee;
+}
+
+.address-main .add-item:last-child {
+	border-bottom: none;
+}
+
+.address-main .add-item .addleft {
+	width: 21.73vw;
+	font-size: 3.38vw;
+	height: 7.24vw;
+  line-height: 7.24vw;
+	padding-left: 2.41vw;
+}
+
+/* 右侧input框*/
+.address-main .add-item .addright {
+	width: 73vw;
+}
+
+.address-main .add-item .addright textarenavigator {
+	border: 0;
+	width: 100%;
+	height: 19.32vw;
+}
+
+.address-main .add-item .addright input {
+	border: 0;
+	outline: 0;
+	font-size: 3.7vw;
+	color: black;
+}
+
+/* 省市区定位 */
+.province {
+	position: relative;
+}
+
+.province .province-pic {
+	position: absolute;
+	width: 15vw;
+	bottom: 4vw;
+	right: 0vw;
+}
+
+.province .province-pic image {
+	width: 3vw;
+	height: 4vw;
+}
+
+/* 详细地址定位 */
+.minute {
+	position: relative;
+}
+
+.minute .minute-pic {
+	position: absolute;
+	bottom: 3vw;
+	right: 3vw;
+}
+
+.minute .minute-pic image {
+	width: 4vw;
+	height: 4vw;
+}
+
+/* 保存地址 */
+.address-save {
+	width: 100%;
+	text-align: center;
+}
+
+.address-save .save {
+	background: #F60;
+	color: #fff;
+	height: 10.14vw;
+	display: inline-block;
+	line-height: 10.14vw;
+	font-size: 4.10vw;
+	width: 96.14vw;
+	margin: 0 auto;
+}
+
+/* 删除地址 */
+.address-del {
+	width: 100%;
+	text-align: center;
+}
+
+.address-del .del {
+	width: 52vw;
+	background: #fff;
+	color: #555;
+	padding: 2vw 0;
+	border-radius: 10vw;
+	display: inline-block;
+	margin: 4vw 0 100vw 0;
+	border: 0.27vw solid #eeeeee;
+}
+
+/* 地址选择 */
+
+.cover-section {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, .5);
+}
+
+.address-select {
+	position: fixed;
+	top: 20%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+}
+
+.cover-title {
+	position: relative;
+	text-align: center;
+	font-size: 3.71vw;
+	color: rgba(57, 64, 80, .6);
+	padding: 3.71vw 0;
+	border-bottom: 0.133vw solid #e8eaee;
+}
+
+.select {
+	border-bottom: 0.133vw solid #e8eaee;
+	position: relative;
+	z-index: 100;
+}
+
+.select text {
+	display: inline-block;
+	font-size: 3.96vw;
+	color: #579de7;
+	padding: 3.42vw 0;
+	border-bottom: 1px solid #579de7;
+	margin-left: 3.47vw;
+}
+
+.select .select-market {
+	display: none;
+}
+
+.select .select-county {
+	display: none;
+}
+
+.select .select-town {
+	display: none;
+}
+
+.address-select .market {
+	display: none;
+}
+
+.address-select .county {
+	display: none;
+}
+
+.address-selection {
+	position: absolute;
+	top: 0vw;
+	bottom: 0;
+	left: 0vw;
+	right: -6vw;
+	background-color: #fff;
+	overflow-y: scroll;
+	/* overflow-x: hidden !important; */
+	box-orient: vertical;
+}
+
+.address-selection .list {
+	position: relative;
+}
+
+.cover-hide {
+	position: absolute;
+	top: 25vw;
+	bottom: 0;
+	left: 3vw;
+	right: 3vw;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.cover-section .list .li {
+	font-size: 3.5vw;
+	color: #5f6874;
+	padding: 2.97vw 0;
+	border-bottom: 0.133vw solid #e8eaee;
+}
+
+.cover-section {
+	display: none;
+}
+.picker{
+  font-size: 3.38vw;
+  line-height:7.24vw;
+  color: #666;
+}
+textarea{
+  font-size: 3.38vw;
+}

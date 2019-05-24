@@ -1,0 +1,680 @@
+<!-- 页面主体 -->
+<view class="main">
+	<!--标题-->
+	<view class="title">
+		<view class="title_left">
+			<navigator url="../classify/classify.html">
+				<i class="iconfont iconfont-category"></i>
+			</navigator>
+		</view>
+		<view class="title_center">
+			<image src="/images/index/m_hualogo.png"></image>
+		</view>
+		<view class="title_right">
+			<navigator url="../login/login.html">
+				<view>登录</view>
+			</navigator>
+		</view>
+	</view>
+	<!-- 轮播图 -->
+	<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+		<block wx:for="{{imgUrls}}" wx:key="{{index}}">
+			<swiper-item>
+				<image src="{{item}}" class="slide-image" width="750" height="360" />
+			</swiper-item>
+		</block>
+	</swiper>
+	<!-- 菜单一 -->
+	<view class="menu1">
+		<view class="menu1_top">
+			<view class="iconfont iconfont-checkout">
+				认证龙头企业
+			</view>
+			<view class="iconfont iconfont-checkout">
+				14年品牌
+			</view>
+			<view class="iconfont iconfont-checkout">
+				3小时送花
+			</view>
+			<view class="iconfont iconfont-checkout">
+				最近299694条好评
+			</view>
+		</view>
+		<view class="menu1_center">
+
+			<view class="menu1_center_p">
+				<navigator url="#">
+					<image src="/images/index/m_home_category_flower.png"></image>
+					<view>鲜花</view>
+				</navigator>
+			</view>
+			<view class="menu1_center_p">
+				<navigator url="#">
+					<image src="/images/index/category_ppf.png"></image>
+					<view>永生花</view>
+				</navigator>
+			</view>
+			<view class="menu1_center_p">
+				<navigator url="#">
+					<image src="/images/index/category_cake.png"></image>
+					<view>蛋糕</view>
+				</navigator>
+			</view>
+			<view class="menu1_center_p">
+				<navigator url="#">
+					<image src="/images/index/category_gift.png"></image>
+					<view>礼品</view>
+				</navigator>
+			</view>
+
+			<view class="menu1_center_p">
+				<navigator url="#">
+					<image src="/images/index/category_chocolate.png"></image>
+					<view>巧克力</view>
+				</navigator>
+			</view>
+		</view>
+		<view class="menu1_bottom">
+			<image src="/images/index/m_newuser_order.gif"></image>
+		</view>
+	</view>
+	<!-- 菜单二 -->
+	<view class="menu2">
+		<view class="menu2_title">
+			<view>一秒选花</view>
+		</view>
+		<view class="menu2_sub1">
+			<view class="menu2_sub1_p">
+				<image src="/images/index/m_home_use_love.png"></image>
+				<view>送恋人</view>
+			</view>
+			<view class="menu2_sub1_p">
+				<image src="/images/index/m_home_use_parent.png"></image>
+				<view>送长辈</view>
+			</view>
+			<view class="menu2_sub1_p">
+				<image src="/images/index/m_home_use_friend.png"></image>
+				<view>送朋友</view>
+			</view>
+		</view>
+		<view class="menu2_sub2">
+			<view class="menu2_sub2_p">
+				<image src="/images/index/m_home_use_birthday.png"></image>
+				<view>生日祝福</view>
+			</view>
+			<view class="menu2_sub2_p">
+				<image src="/images/index/m_home_use_anniversary.png"></image>
+				<view>表白求婚</view>
+			</view>
+			<view class="menu2_sub2_p">
+				<image src="/images/index/m_home_use_business.png"></image>
+				<view>开业商务</view>
+			</view>
+			<view class="menu2_sub2_p">
+				<image src="/images/index/m_home_use_anniversary.png"></image>
+				<view>周年纪念</view>
+			</view>
+
+		</view>
+
+		<view class="menu2_sub3">
+			<view class="menu2_sub3_p">
+				<image src="/images/index/m_home_ranklist.png"></image>
+				<view>热销榜</view>
+				<view>集千万宠爱</view>
+				<view>大家都在买</view>
+				<view>热销8.2万束</view>
+			</view>
+			<view class="menu2_sub3_p">
+				<image src="/images/index/m_home_special.png"></image>
+				<view>特价专区</view>
+				<view>超值好货</view>
+				<view>限时直降</view>
+				<view>¥129
+					<text>¥215</text>
+				</view>
+			</view>
+		</view>
+		<view class="menu2_sub4">
+			<view class="menu2_sub4_p">
+				<image src="/images/index/m_home_category_new.png"></image>
+				<view>新品来袭</view>
+			</view>
+			<view class="menu2_sub4_p">
+				<image src="/images/index/m_home_category_quality.png"></image>
+				<view>品味之选</view>
+			</view>
+			<view class="menu2_sub4_p">
+				<image src="/images/index/m_home_category_you.png"></image>
+				<view>设计师甄选</view>
+			</view>
+		</view>
+
+	</view>
+	<!-- 分割线 -->
+	<view class="cut">
+
+	</view>
+	<!-- 列表 1-->
+	<view class="list1">
+		<view class="list1_title">
+			爱情鲜花推荐
+		</view>
+		<view class="list1_sub">
+			<view class="list1_sub_left">
+				<image src="/images/index/9012223.jpg"></image>
+			</view>
+			<view class="list1_sub_right">
+				<view class="list1_sub_right_t">
+					<view>一往情深</view>
+					<view>精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎</view>
+					<view>精品优选</view>
+				</view>
+				<view class="list1_sub_right_c">
+					<view>经典爆款，年销售冠军！</view>
+				</view>
+				<view class="list1_sub_right_b">
+					<view class="list1_sub_right_b_l">
+						<view class='new'>¥242
+							<text class='old'>¥315</text>
+						</view>
+						<view class='solded'>已销售8.2万件</view>
+					</view>
+					<view class="list1_sub_right_b_r">
+						<i class="iconfont iconfont-buy"></i>
+					</view>
+
+				</view>
+			</view>
+		</view>
+		<view class="list1_sub">
+			<view class="list1_sub_left">
+				<image src="/images/index/9012345.jpg"></image>
+			</view>
+			<view class="list1_sub_right">
+				<view class="list1_sub_right_t">
+					<view>一往情深</view>
+					<view>精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎</view>
+					<view>精品优选</view>
+				</view>
+				<view class="list1_sub_right_c">
+					<view>经典爆款，年销售冠军！</view>
+				</view>
+				<view class="list1_sub_right_b">
+					<view class="list1_sub_right_b_l">
+						<view class='new'>¥242
+							<text class='old'>¥315</text>
+						</view>
+						<view class='solded'>已销售8.2万件</view>
+					</view>
+					<view class="list1_sub_right_b_r">
+						<i class="iconfont iconfont-buy"></i>
+					</view>
+
+				</view>
+			</view>
+		</view>
+		<view class="list1_sub">
+			<view class="list1_sub_left">
+				<image src="/images/index/9012413.jpg"></image>
+			</view>
+			<view class="list1_sub_right">
+				<view class="list1_sub_right_t">
+					<view>一往情深</view>
+					<view>精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎</view>
+					<view>精品优选</view>
+				</view>
+				<view class="list1_sub_right_c">
+					<view>经典爆款，年销售冠军！</view>
+				</view>
+				<view class="list1_sub_right_b">
+					<view class="list1_sub_right_b_l">
+						<view class='new'>¥242
+							<text class='old'>¥315</text>
+						</view>
+						<view class='solded'>已销售8.2万件</view>
+					</view>
+					<view class="list1_sub_right_b_r">
+						<i class="iconfont iconfont-buy"></i>
+					</view>
+
+				</view>
+			</view>
+		</view>
+		<view class="list1_sub">
+			<view class="list1_sub_left">
+				<image src="/images/index/9012175.jpg"></image>
+			</view>
+			<view class="list1_sub_right">
+				<view class="list1_sub_right_t">
+					<view>一往情深</view>
+					<view>精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎</view>
+					<view>精品优选</view>
+				</view>
+				<view class="list1_sub_right_c">
+					<view>经典爆款，年销售冠军！</view>
+				</view>
+				<view class="list1_sub_right_b">
+					<view class="list1_sub_right_b_l">
+						<view class='new'>¥242
+							<text class='old'>¥315</text>
+						</view>
+						<view class='solded'>已销售8.2万件</view>
+					</view>
+					<view class="list1_sub_right_b_r">
+						<i class="iconfont iconfont-buy"></i>
+					</view>
+
+				</view>
+			</view>
+		</view>
+		<view class="list1_sub">
+			<view class="list1_sub_left">
+				<image src="/images/index/9012038.jpg"></image>
+			</view>
+			<view class="list1_sub_right">
+				<view class="list1_sub_right_t">
+					<view>一往情深</view>
+					<view>精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎</view>
+					<view>精品优选</view>
+				</view>
+				<view class="list1_sub_right_c">
+					<view>经典爆款，年销售冠军！</view>
+				</view>
+				<view class="list1_sub_right_b">
+					<view class="list1_sub_right_b_l">
+						<view class='new'>¥242
+							<text class='old'>¥315</text>
+						</view>
+						<view class='solded'>已销售8.2万件</view>
+					</view>
+					<view class="list1_sub_right_b_r">
+						<i class="iconfont iconfont-buy"></i>
+					</view>
+
+				</view>
+			</view>
+		</view>
+		<view class="list1_sub">
+			<view class="list1_sub_left">
+				<image src="/images/index/9012177.jpg"></image>
+			</view>
+			<view class="list1_sub_right">
+				<view class="list1_sub_right_t">
+					<view>一往情深</view>
+					<view>精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎</view>
+					<view>精品优选</view>
+				</view>
+				<view class="list1_sub_right_c">
+					<view>经典爆款，年销售冠军！</view>
+				</view>
+				<view class="list1_sub_right_b">
+					<view class="list1_sub_right_b_l">
+						<view class='new'>¥242
+							<text class='old'>¥315</text>
+						</view>
+						<view class='solded'>已销售8.2万件</view>
+					</view>
+					<view class="list1_sub_right_b_r">
+						<i class="iconfont iconfont-buy"></i>
+					</view>
+
+				</view>
+			</view>
+		</view>
+		<view class="list1_sub">
+			<view class="list1_sub_left">
+				<image src="/images/index/9012273.jpg"></image>
+			</view>
+			<view class="list1_sub_right">
+				<view class="list1_sub_right_t">
+					<view>一往情深</view>
+					<view>精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎</view>
+					<view>精品优选</view>
+				</view>
+				<view class="list1_sub_right_c">
+					<view>经典爆款，年销售冠军！</view>
+				</view>
+				<view class="list1_sub_right_b">
+					<view class="list1_sub_right_b_l">
+						<view class='new'>¥242
+							<text class='old'>¥315</text>
+						</view>
+						<view class='solded'>已销售8.2万件</view>
+					</view>
+					<view class="list1_sub_right_b_r">
+						<i class="iconfont iconfont-buy"></i>
+					</view>
+
+				</view>
+			</view>
+		</view>
+		<view class="list1_sub">
+			<view class="list1_sub_left">
+				<image src="/images/index/9012038.jpg"></image>
+			</view>
+			<view class="list1_sub_right">
+				<view class="list1_sub_right_t">
+					<view>一往情深</view>
+					<view>精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎</view>
+					<view>精品优选</view>
+				</view>
+				<view class="list1_sub_right_c">
+					<view>经典爆款，年销售冠军！</view>
+				</view>
+				<view class="list1_sub_right_b">
+					<view class="list1_sub_right_b_l">
+						<view class='new'>¥242
+							<text class='old'>¥315</text>
+						</view>
+						<view class='solded'>已销售8.2万件</view>
+					</view>
+					<view class="list1_sub_right_b_r">
+						<i class="iconfont iconfont-buy"></i>
+					</view>
+
+				</view>
+			</view>
+		</view>
+		<view class="list1_more">
+			<view>查看更多</view>
+		</view>
+	</view>
+	<view class="cut">
+
+	</view>
+	<!-- 列表 2 -->
+	<view class="list2">
+		<view class="list2_title">
+			送长辈鲜花推荐
+		</view>
+		<view class="list1_sub">
+			<view class="list1_sub_left">
+				<image src="/images/index/9010766.jpg"></image>
+			</view>
+			<view class="list1_sub_right">
+				<view class="list1_sub_right_t">
+					<view>一往情深</view>
+					<view>精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎</view>
+					<view>精品优选</view>
+				</view>
+				<view class="list1_sub_right_c">
+					<view>经典爆款，年销售冠军！</view>
+				</view>
+				<view class="list1_sub_right_b">
+					<view class="list1_sub_right_b_l">
+						<view class='new'>¥242
+							<text class='old'>¥315</text>
+						</view>
+						<view class='solded'>已销售8.2万件</view>
+					</view>
+					<view class="list1_sub_right_b_r">
+						<i class="iconfont iconfont-buy"></i>
+					</view>
+
+				</view>
+			</view>
+		</view>
+		<view class="list1_sub">
+			<view class="list1_sub_left">
+				<image src="/images/index/9012092.jpg"></image>
+			</view>
+			<view class="list1_sub_right">
+				<view class="list1_sub_right_t">
+					<view>一往情深</view>
+					<view>精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎</view>
+					<view>精品优选</view>
+				</view>
+				<view class="list1_sub_right_c">
+					<view>经典爆款，年销售冠军！</view>
+				</view>
+				<view class="list1_sub_right_b">
+					<view class="list1_sub_right_b_l">
+						<view class='new'>¥242
+							<text class='old'>¥315</text>
+						</view>
+						<view class='solded'>已销售8.2万件</view>
+					</view>
+					<view class="list1_sub_right_b_r">
+						<i class="iconfont iconfont-buy"></i>
+					</view>
+
+				</view>
+			</view>
+		</view>
+		<view class="list1_sub">
+			<view class="list1_sub_left">
+				<image src="/images/index/9012201.jpg"></image>
+			</view>
+			<view class="list1_sub_right">
+				<view class="list1_sub_right_t">
+					<view>一往情深</view>
+					<view>精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎</view>
+					<view>精品优选</view>
+				</view>
+				<view class="list1_sub_right_c">
+					<view>经典爆款，年销售冠军！</view>
+				</view>
+				<view class="list1_sub_right_b">
+					<view class="list1_sub_right_b_l">
+						<view class='new'>¥242
+							<text class='old'>¥315</text>
+						</view>
+						<view class='solded'>已销售8.2万件</view>
+					</view>
+					<view class="list1_sub_right_b_r">
+						<i class="iconfont iconfont-buy"></i>
+					</view>
+
+				</view>
+			</view>
+		</view>
+		<view class="list1_sub">
+			<view class="list1_sub_left">
+				<image src="/images/index/9012369.jpg"></image>
+			</view>
+			<view class="list1_sub_right">
+				<view class="list1_sub_right_t">
+					<view>一往情深</view>
+					<view>精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎</view>
+					<view>精品优选</view>
+				</view>
+				<view class="list1_sub_right_c">
+					<view>经典爆款，年销售冠军！</view>
+				</view>
+				<view class="list1_sub_right_b">
+					<view class="list1_sub_right_b_l">
+						<view class='new'>¥242
+							<text class='old'>¥315</text>
+						</view>
+						<view class='solded'>已销售8.2万件</view>
+					</view>
+					<view class="list1_sub_right_b_r">
+						<i class="iconfont iconfont-buy"></i>
+					</view>
+
+				</view>
+			</view>
+		</view>
+		<view class="list1_more">
+			<view>查看更多</view>
+		</view>
+	</view>
+	<view class="cut">
+
+	</view>
+	<!-- 列表 3 -->
+	<view class="list3">
+		<view class="list3_title">
+			永生花推荐
+		</view>
+
+
+
+		<view class="list3_box">
+			<view class="list3_sub">
+				<image src="/images/index/1073209.jpg"></image>
+				<view class="list3_sub_t">
+					<view>畅销爆款</view>
+					<view>花漾蜜恋·少女粉·音乐球永生花礼盒，创意礼物</view>
+				</view>
+				<view class="list3_sub_b">
+					<view class="list3_sub_b_l">
+						<view class='new'>¥242
+							<text class='old'>¥315</text>
+						</view>
+						<view class='solded'>已销售8.2万件</view>
+					</view>
+					<view class="list3_sub_b_r">
+						<i class="iconfont iconfont-buy"></i>
+					</view>
+
+				</view>
+			</view>
+			<view class="list3_sub">
+				<image src="/images/index/1073039.jpg"></image>
+				<view class="list3_sub_t">
+					<view>畅销爆款</view>
+					<view>花漾蜜恋·少女粉·音乐球永生花礼盒，创意礼物</view>
+				</view>
+				<view class="list3_sub_b">
+					<view class="list3_sub_b_l">
+						<view class='new'>¥242
+							<text class='old'>¥315</text>
+						</view>
+						<view class='solded'>已销售8.2万件</view>
+					</view>
+					<view class="list3_sub_b_r">
+						<i class="iconfont iconfont-buy"></i>
+					</view>
+
+				</view>
+			</view>
+			<view class="list3_sub">
+				<image src="/images/index/1073191.jpg"></image>
+				<view class="list3_sub_t">
+					<view>畅销爆款</view>
+					<view>花漾蜜恋·少女粉·音乐球永生花礼盒，创意礼物</view>
+				</view>
+				<view class="list3_sub_b">
+					<view class="list3_sub_b_l">
+						<view class='new'>¥242
+							<text class='old'>¥315</text>
+						</view>
+						<view class='solded'>已销售8.2万件</view>
+					</view>
+					<view class="list3_sub_b_r">
+						<i class="iconfont iconfont-buy"></i>
+					</view>
+
+				</view>
+			</view>
+			<view class="list3_sub">
+				<image src="/images/index/1073243.jpg"></image>
+				<view class="list3_sub_t">
+					<view>畅销爆款</view>
+					<view>花漾蜜恋·少女粉·音乐球永生花礼盒，创意礼物</view>
+				</view>
+				<view class="list3_sub_b">
+					<view class="list3_sub_b_l">
+						<view class='new'>¥242
+							<text class='old'>¥315</text>
+						</view>
+						<view class='solded'>已销售8.2万件</view>
+					</view>
+					<view class="list3_sub_b_r">
+						<i class="iconfont iconfont-buy"></i>
+					</view>
+				</view>
+			</view>
+
+
+		</view>
+	</view>
+	<!-- 联系我们 -->
+	<view class="contact">
+		<view class="contact_p">
+			<image src="/images/index/m_home_qiyetuangou.png"></image>
+		</view>
+		<view class="contact_t">
+			为什么选择我们
+		</view>
+		<view class="contact_l">
+
+			<view class="contact_l_sub">
+				<view>
+					<image src="/images/index/m_details_brand_01.png"></image>
+				</view>
+				<view>获评鲜花龙头企业</view>
+			</view>
+			<view class="contact_l_sub">
+				<view>
+					<image src="/images/index/m_details_brand_02.png"></image>
+				</view>
+				<view>1~3小时送花上门</view>
+			</view>
+			<view class="contact_l_sub">
+				<view>
+					<image src="/images/index/m_details_brand_03.png"></image>
+				</view>
+				<view>赛事冠军花艺师团队</view>
+			</view>
+			<view class="contact_l_sub">
+				<view>
+					<image src="/images/index/m_details_brand_04.png"></image>
+				</view>
+				<view>严选花材</view>
+			</view>
+			<view class="contact_l_sub">
+				<view>
+					<image src="/images/index/m_details_brand_05.png"></image>
+				</view>
+				<view>12道严苛品控标准</view>
+			</view>
+			<view class="contact_l_sub">
+				<view>
+					<image src="/images/index/m_details_brand_06.png"></image>
+				</view>
+				<view>500万用户信赖好评</view>
+			</view>
+		</view>
+		<view class="cut">
+
+		</view>
+		<view class="contact_tab">
+			<view>企业团购</view>
+			<view>设计师款</view>
+			<view>同城鲜花</view>
+			<view>花语大全</view>
+			<view>花礼优势</view>
+			<view>勇敢爱</view>
+			<view>常见问题</view>
+			<view>关于我们</view>
+		</view>
+		<view class="service">
+			<view class="service_l">
+				<view>
+					<i class="iconfont iconfont-iphone"></i>
+				</view>
+				<view>客户端</view>
+			</view>
+			<view class="service_l">
+				<view>
+					<i class="iconfont iconfont-sevice"></i>
+				</view>
+				<view>客服</view>
+			</view>
+
+		</view>
+		<view class="footer">Copyright © 2005~2019 花礼网（中国鲜花礼品网）版权所有<text>\n</text>中国鲜花网领先品牌，鲜花速递专家！
+		</view>
+	</view>
+	<!-- 返回顶部 -->
+	<view class="roll">
+		<i class="iconfont iconfont-top"></i>
+	</view>
+	<!-- 授权弹窗 -->
+	<!-- 父组件给子组件传递消息 show="{{AuthModelShow}}" -->
+	<Auth-Model show="{{AuthModelShow}}" bind:getAuth="authHandle">
+	</Auth-Model>
+</view>

@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText": "首页",
+	"usingComponents": {
+		"Auth-Model": "/components/Auth-Model/index"
+	}
+}

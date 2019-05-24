@@ -1,0 +1,168 @@
+<view class="product-wrap">
+	<view class="product">
+		<view class='ul'>
+			<view class='li'>
+				<label for="">
+					<input type="checkbox" name="checkbox" id="" value="" />
+					<text class="checkbtn"></text>
+				</label>
+			</view>
+			<view class='li'>
+				<view class="info-wrap">
+					<view class="img-wrap">
+						<navigator url="../details/details.html">
+							<image src="/images/cart/9012038.jpg_220x240.jpg"></image>
+						</navigator>
+					</view>
+					<view class="info">
+						<view class="title">[鲜花]依靠</view>
+						<view class="price">￥155</view>
+					</view>
+				</view>
+			</view>
+			<view class='li'>
+				<view class="add-del">
+					<text class="del">-</text>
+					<input type="text" name="" id="input-text" value="1" placeholder="1" />
+					<text class="add">+</text>
+				</view>
+			</view>
+
+			<view class='li'>
+				<text class="delete">删除</text>
+			</view>
+		</view>
+	</view>
+	<view class="product">
+		<view class='ul'>
+			<view class='li'>
+				<label for="">
+					<input type="checkbox" name="checkbox" id="" value="" />
+					<text class="checkbtn"></text>
+				</label>
+			</view>
+			<view class='li'>
+				<view class="info-wrap">
+					<view class="img-wrap">
+						<image src="/images/cart/9012332.jpg_220x240.jpg"></image>
+					</view>
+					<view class="info">
+						<view class="title">[鲜花]妈妈的爱</view>
+						<view class="price">￥219</view>
+					</view>
+				</view>
+			</view>
+			<view class='li'>
+				<view class="add-del">
+					<text class="del">-</text>
+					<input type="text" name="" id="input-text" value="1" placeholder="1" />
+					<text class="add">+</text>
+				</view>
+			</view>
+
+			<view class='li'>
+				<text class="delete">删除</text>
+			</view>
+		</view>
+	</view>
+	<view class="product">
+		<view class='ul'>
+			<view class='li'>
+				<label for="">
+					<input type="checkbox" name="checkbox" id="" value="" />
+					<text class="checkbtn"></text>
+				</label>
+			</view>
+			<view class='li'>
+				<view class="info-wrap">
+					<view class="img-wrap">
+						<image src="/images/cart/9012096.jpg_220x240.jpg"></image>
+					</view>
+					<view class="info">
+						<view class="title">[鲜花]依靠</view>
+						<view class="price">￥355</view>
+					</view>
+				</view>
+			</view>
+			<view class='li'>
+				<view class="add-del">
+					<text class="del">-</text>
+					<input type="text" name="" id="input-text" value="1" />
+					<text class="add">+</text>
+				</view>
+			</view>
+
+			<view class='li'>
+				<text class="delete">删除</text>
+			</view>
+		</view>
+	</view>
+	<view class="product">
+		<view class='ul'>
+			<view class='li'>
+				<label for="">
+					<input type="checkbox" name="checkbox" id="" value="" />
+					<text class="checkbtn"></text>
+				</label>
+			</view>
+			<view class='li'>
+				<view class="info-wrap">
+					<view class="img-wrap">
+						<image src="/images/cart/9012413.jpg_220x240.jpg"></image>
+					</view>
+					<view class="info">
+						<view class="title">[鲜花]春分十里</view>
+						<view class="price">￥429</view>
+					</view>
+				</view>
+			</view>
+			<view class='li'>
+				<view class="add-del">
+					<text class="del">-</text>
+					<input type="text" name="" id="input-text" value="1" />
+					<text class="add">+</text>
+				</view>
+			</view>
+
+			<view class='li'>
+				<text class="delete">删除</text>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="space"></view>
+<view class="bottom">
+	<view class="total">
+		<text>合计:</text>
+		<text class="sum">￥0</text>
+	</view>
+	<view class="payment">
+		<text>去结算(
+			<text class="pay-text">0</text>)</text>
+	</view>
+</view>
+<view class="pop-wrap">
+	<view class="box-pop">
+		<view class="text-botton-wrap">
+			<view class="text">确认删除此商品吗？</view>
+			<view class="button-wrap">
+				<button class="no">取消</button>
+				<button class="yes active">确认</button>
+			</view>
+		</view>
+	</view>
+</view>
+
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
+ previous-margin="10rpx" display-multiple-items="4">
+	<block wx:for="{{swiper.info}}" wx:key="{{index}}">
+		<swiper-item>
+			<view class="imgWrap">
+				<image src="{{ item.url }}" class="slide-image" />
+			</view>
+			<view class="title">{{item.title}}</view>
+			<view class="price">{{item.price}}</view>
+		</swiper-item>
+	</block>
+</swiper>
+<!-- 第二个 -->
