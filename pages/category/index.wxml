@@ -8,32 +8,10 @@
 <view class="spacex"></view>
 <view class="two-col">
 	<view class="left">
-		<view>
+		<view wx:for='{{list}}' wx:key="{{index}}">
 			<view>
-				<navigator class="re" href="#">热门推荐</navigator>
+				<view class="navigator" url='' data-id='{{item.id}}' bindtap="changeHandle">{{item.name}}</view>
 			</view>
-			<view>
-				<navigator class="flo" href="#">鲜花</navigator>
-			</view>
-			<view>
-				<navigator class="imm" href="#">永生花</navigator>
-			</view>
-			<view>
-				<navigator class="cak" href="#">蛋糕</navigator>
-			</view>
-			<view>
-				<navigator class="cho" href="#">巧克力</navigator>
-			</view>
-			<view>
-				<navigator class="spe" href="#">特色礼品</navigator>
-			</view>
-			<view>
-				<navigator class="bas" href="#">礼篮</navigator>
-			</view>
-			<view>
-				<navigator class="pla" href="#">绿植花卉</navigator>
-			</view>
-
 		</view>
 	</view>
 	<view class="spacey"></view>
@@ -44,51 +22,9 @@
 				<navigator url="#"></navigator>
 			</view>
 			<view class="item-wrap">
-				<navigator url="../search/search.html">
-					<image src="/images/category/m_category_flower_hot_business.jpg" alt=""></image>
-						<view class="text">鲜花</view>
-				</navigator>
-				<navigator url="#">
-					<image src="/images/category/m_category_flower_hot_cake.jpg" alt=""></image>
-						<view class="text">蛋糕</view>
-				</navigator>
-				<navigator url="#">
-					<image src="/images/category/m_category_flower_hot_ppf.jpg" alt=""></image>
-						<view class="text">永生花</view>
-				</navigator>
-			</view>
-			<view class="item-wrap">
-				<navigator url="#">
-					<image src="/images/category/m_category_flower_hot_gift.jpg" alt=""></image>
-						<view class="text">特色礼品</view>
-				</navigator>
-				<navigator url="#">
-					<image src="/images/category/m_category_flower_hot_you.jpg" alt=""></image>
-						<view class="text">设计师款</view>
-				</navigator>
-				<navigator url="#">
-					<image src="/images/category/m_category_flower_hot_business.jpg" alt=""></image>
-						<view class="text">商务鲜花</view>
-				</navigator>
-			</view>
-			<view class="item-wrap">
-				<navigator url="#">
-					<image src="/images/category/m_category_flower_hot_chocolate.jpg" alt=""></image>
-						<view class="text">巧克力</view>
-				</navigator>
-				<navigator url="#">
-					<image src="/images/category/m_category_flower_hot_baseket.jpg" alt=""></image>>
-						<view class="text">礼篮</view>
-				</navigator>
-				<navigator url="#">
-					<image src="/images/category/m_category_flower_hot_plant.jpg" alt=""></image>
-						<view class="text">绿植花卉</view>
-				</navigator>
-			</view>
-			<view class="item-wrap">
-				<navigator url="#">
-					<image src="/images/category/m_category_flower_hot_groupbuy.jpg" alt=""></image>
-						<view class="text">企业团购</view>
+				<navigator url="../search/search.html" wx:for='{{list_2}}' wx:key='{{item.id}}'>
+					<image src="{{item.img}}" alt=""></image>
+						<view class="text">{{item.id}}{{item.name}}</view>
 				</navigator>
 			</view>
 		</view>
@@ -96,7 +32,7 @@
 
 
 		<!-- 鲜花 -->
-		<view class="flower">
+		<!-- <view class="flower">
 			<view class="bg">
 				<navigator url="#">
 					<view class="graybg">浪漫告白·卡罗拉红玫瑰11枝 </view>
@@ -237,197 +173,10 @@
 				<navigator url="">颜色</navigator>
 			</view>
 			<view class="hot-bottom"></view>
-			<view class="item-color">
-				<view class='ul'>
-					<view class='li'>
-						<navigator url="#">
-							<view class="box red"></view><text>红色</text>
-						</navigator>
-					</view>
-					<view class='li'>
-						<navigator url="#">
-							<view class="box pink"></view><text>粉色</text>
-						</navigator>
-					</view>
-					<view class='li'>
-						<navigator url="#">
-							<view class="box champagne"></view><text>香槟色</text>
-						</navigator>
-					</view>
-				</view>
-				<view class='ul'>
-					<view class='li'>
-						<navigator url="#">
-							<view class="box yellow"></view><text>黄色</text>
-						</navigator>
-					</view>
-					<view class='li'>
-						<navigator url="#">
-							<view class="box white"></view><text>白色</text>
-						</navigator>
-					</view>
-					<view class='li'>
-						<navigator url="#">
-							<view class="box purple"></view><text>紫色</text>
-						</navigator>
-					</view>
-				</view>
-				<view class='ul'>
-					<view class='li'>
-						<navigator url="#">
-							<view class="box blue"></view><text>蓝色</text>
-						</navigator>
-					</view>
-				</view>
-			</view>
-			<view class="hot">
-				<navigator url="">价格</navigator>
-			</view>
-			<view class="hot-bottom"></view>
-			<view class="price-wrap">
-				<view class="item-color">
-					<view class='ul'>
-						<view class='li'>
-							<navigator url="#">
-								<text>特价鲜花</text>
-							</navigator>
-						</view>
-						<view class='li'>
-							<navigator url="#">
-								<text>150元以下</text>
-							</navigator>
-						</view>
-						<view class='li'>
-							<navigator url="#">
-								<text>150-250元</text>
-							</navigator>
-						</view>
-					</view>
-					<view class='ul'>
-						<view class='li'>
-							<navigator url="#">
-								<text>250-350元</text>
-							</navigator>
-						</view>
-						<view class='li'>
-							<navigator url="#">
-								<text>350-550元</text>
-							</navigator>
-						</view>
-						<view class='li'>
-							<navigator url="#">
-								<text>550-800元</text>
-							</navigator>
-						</view>
-					</view>
-					<view class='ul'>
-						<view class='li'>
-							<navigator url="#">
-								<text>800元以上</text>
-							</navigator>
-						</view>
-					</view>
-				</view>
-			</view>
-
-			<view class="hot">
-				<navigator url="">枝数</navigator>
-			</view>
-			<view class="hot-bottom"></view>
-			<view class="price-wrap">
-				<view class="item-color">
-					<view class='ul'>
-						<view class='li'>
-							<navigator url="#">
-								<text>9枝</text>
-							</navigator>
-						</view>
-						<view class='li'>
-							<navigator url="#">
-								<text>10枝</text>
-							</navigator>
-						</view>
-						<view class='li'>
-							<navigator url="#">
-								<text>11枝</text>
-							</navigator>
-						</view>
-					</view>
-					<view class='ul'>
-						<view class='li'>
-							<navigator url="#">
-								<text>12枝</text>
-							</navigator>
-						</view>
-						<view class='li'>
-							<navigator url="#">
-								<text>16枝</text>
-							</navigator>
-						</view>
-						<view class='li'>
-							<navigator url="#">
-								<text>18枝</text>
-							</navigator>
-						</view>
-					</view>
-					<view class='ul'>
-						<view class='li'>
-							<navigator url="#">
-								<text>19枝</text>
-							</navigator>
-						</view>
-						<view class='li'>
-							<navigator url="#">
-								<text>20枝</text>
-							</navigator>
-						</view>
-						<view class='li'>
-							<navigator url="#">
-								<text>22枝</text>
-							</navigator>
-						</view>
-					</view>
-					<view class='ul'>
-						<view class='li'>
-							<navigator url="#">
-								<text>29枝</text>
-							</navigator>
-						</view>
-						<view class='li'>
-							<navigator url="#">
-								<text>33枝</text>
-							</navigator>
-						</view>
-						<view class='li'>
-							<navigator url="#">
-								<text>26枝</text>
-							</navigator>
-						</view>
-					</view>
-					<view class='ul'>
-						<view class='li'>
-							<navigator url="#">
-								<text>50枝</text>
-							</navigator>
-						</view>
-						<view class='li'>
-							<navigator url="#">
-								<text>66枝</text>
-							</navigator>
-						</view>
-						<view class='li'>
-							<navigator url="#">
-								<text>99枝枝以上</text>
-							</navigator>
-						</view>
-					</view>
-				</view>
-			</view>
-
 		</view>
 		<!-- 鲜花结束 -->
 		<!-- 永生花 -->
-		<view class="immortal">
+		<!-- <view class="immortal">
 			<view class="bg">
 				<navigator url="#">
 					<view class="graybg">永生花·一生一世</view>
@@ -460,10 +209,11 @@
 				</navigator>
 
 			</view>
-		</view>
+		</view> -->
+		
 		<!-- 永生花花结束 -->
 		<!-- 蛋糕 -->
-		<view class="cake">
+		<!-- <view class="cake">
 			<view class="bg">
 				<navigator url="#">
 					<view class="graybg">美味蛋糕·让生活充满甜蜜</view>
@@ -519,10 +269,10 @@
 					</view>
 				</view>
 			</view>
-		</view>
+		</view> -->
 		<!-- 蛋糕结束 -->
 		<!-- 巧克力 -->
-		<view class="chocolate">
+	<!-- 	<view class="chocolate">
 			<view class="bg">
 				<navigator url="#">
 					<view class="graybg">CHOLO·玫瑰之恋巧克力礼盒 ￥139</view>
@@ -563,10 +313,10 @@
 				</navigator>
 
 			</view>
-		</view>
+		</view> -->
 		<!-- 巧克力结束 -->
 		<!-- 特色礼品 -->
-		<view class="special">
+		<!-- <view class="special">
 			<view class="bg">
 				<navigator url="#">
 					<view class="graybg">特色礼品·宝石旋转木马</view>
@@ -643,10 +393,10 @@
 				</navigator>
 
 			</view>
-		</view>
+		</view> -->
 		<!-- 特色礼品结束 -->
 		<!-- 礼篮 -->
-		<view class="basket">
+<!-- 		<view class="basket">
 			<view class="bg">
 				<navigator url="#">
 					<view class="graybg">温情礼篮·愿祝福常相伴</view>
@@ -663,10 +413,10 @@
 				</navigator>
 
 			</view>
-		</view>
+		</view> -->
 		<!-- 礼篮结束 -->
 		<!-- 绿植 -->
-		<view class="plant">
+		<!-- <view class="plant">
 			<view class="bg">
 				<navigator url="#">
 					<view class="graybg">绿色花卉·为你的生活加一点颜色</view>

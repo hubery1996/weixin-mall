@@ -49,6 +49,13 @@ Page({
 			'formData.street': e.detail.value
 		})
 	},
+	checkboxChange(e){
+		let flag = e.detail.value.length;
+		console.log(flag)
+		this.setData({
+			'formData.isDefault': flag
+		})
+	},
 	saveHandle(){
 		app.ajax({
 			method:'POST',

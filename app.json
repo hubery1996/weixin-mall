@@ -1,15 +1,15 @@
 {
   "pages": [
+		"pages/category/index",
 		"pages/index/index",
+		"pages/IPAM/IPAM",
 		"pages/address/address",
 		"pages/myCenter/myCenter",
-		"pages/IPAM/IPAM",
 		"pages/editeAddress/edite",
     "pages/detail/detail",
     "pages/text/index",
     "pages/cart/index",
     "pages/list/index",
-    "pages/category/index",
     "pages/user/index",
     "pages/navi/index",
     "components/Auth-Model/index"

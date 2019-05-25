@@ -6,7 +6,7 @@
 		<view class="col-1">
 			<text class="name">{{item.name}}</text>
 			<text class="phone-num">{{item.tel}}</text>
-			<text class="default">默认</text>
+			<text class="default" wx:if="{{item.isDefault==1}}">默认</text>
 		</view>
 		<view class="col-2">
 			<text class="adress">{{item.province}} {{item.city}} {{item.area}}</text>
@@ -16,9 +16,9 @@
 	<view class="info-right">
 		<view class="edit">
 			<navigator url='../editeAddress/edite?id={{item.id}}'>
-			<i class="iconfont iconfont-edit"></i>
+				<i class="iconfont iconfont-edit"></i>
 			</navigator>
-			</view>
+		</view>
 		<view class="delete" data-id="{{item.id}}" bindtap="showDeleteModal">
 			<i class="iconfont iconfont-delete"></i>
 		</view>

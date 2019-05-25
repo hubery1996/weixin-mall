@@ -56,12 +56,15 @@
 		<view class="minute-pic">
 		</view>
 	</view>
-	<!-- <view class="add-item">
-	<label class="radio">
-		<radio value="{{formData.isDefault}}" checked="" />
-		设为默认地址
-	</label>
-	</view> -->
+	<!-- 默认收货地址 -->
+	<view class="add-item">
+		<checkbox-group bindchange="checkboxChange">
+			<label class="checkbox">
+				<checkbox value="{{formData.isDefault}}" color="#FF6600" checked="" />
+				设为默认地址
+			</label>
+		</checkbox-group>
+	</view>
 </view>
 
 <!-- 保存地址 -->

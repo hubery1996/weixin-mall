@@ -1,35 +1,3 @@
-<view class="hidden">
-	<view class='ul'>
-		<view class='li'>
-			<navigator url="../index/index.html">
-				<image src="/images/address/home_icon_new.png"></image>
-				<view class="text">首页</view>
-			</navigator>
-		</view>
-		<view class='li'>
-			<navigator url="../classify/classify.html">
-				<image src="/images/address/classify_icon_new.png"></image>
-				<view class="text">分类</view>
-			</navigator>
-		</view>
-		<view class='li'>
-			<view class="cart-num">
-				<navigator url="../cart/cart.html">
-					<image src="/images/address/cart_icon_new.png"></image>
-					<view class="text">购物车
-						<view class="text-num">0</view>
-					</view>
-				</navigator>
-			</view>
-		</view>
-		<view class='li'>
-			<navigator url="../myCenter/myCenter.html">
-				<image src="/images/address/my_icon_new.png"></image>
-				<view class="text">我的</view>
-			</navigator>
-		</view>
-	</view>
-</view>
 
 <!-- 收货人 -->
 <view class="address-main">
@@ -60,7 +28,7 @@
 		</view>
 	</view>
 	<!-- 省市区 -->
-	<view class="add-item province">
+	<view class="add-item">
 		<view class="addleft">
 			所在地区：
 		</view>
@@ -79,7 +47,7 @@
 		</view>
 	</view>
 	<!--详细地址 -->
-	<view class="add-item minute">
+	<view class="add-item">
 		<view class="addleft">
 			详细地址:
 		</view>
@@ -89,9 +57,18 @@
 		<view class="minute-pic">
 		</view>
 	</view>
+	<!-- 默认收货地址 -->
+	<view class="add-item">
+		<checkbox-group bindchange="checkboxChange">
+			<label class="checkbox">
+				<checkbox value="{{formData.isDefault}}" color="#FF6600" checked='true' />
+				设为默认地址
+			</label>
+		</checkbox-group>
+	</view>
 </view>
 
 <!-- 保存地址 -->
 <view class="address-save">
-		<view class="save" bindtap="saveHandle">保存并使用</view>
+		<view class="save" bindtap="saveHandle">保存编辑</view>
 </view>

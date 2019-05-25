@@ -127,14 +127,17 @@ navigator {
 	border-bottom: none;
 }
 
-.address-main .add-item .addleft {
+.address-main .add-item .addleft,
+.add-item .checkbox {
 	width: 21.73vw;
 	font-size: 3.38vw;
 	height: 7.24vw;
   line-height: 7.24vw;
 	padding-left: 2.41vw;
 }
-
+.add-item .checkbox{
+  color: #FF6600;
+}
 /* 右侧input框*/
 .address-main .add-item .addright {
 	width: 73vw;

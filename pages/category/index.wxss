@@ -115,7 +115,7 @@ input {
   background: #e9ecf0;
 }
 
-.two-col .left navigator {
+.two-col .left .navigator {
   height: 108.675rpx;
   line-height: 108.675rpx;
   color: black;
@@ -126,7 +126,7 @@ input {
   font-size: 27.15rpx;
 }
 
-.two-col .left navigator:hover {
+.two-col .left .navigator:hover {
   color: #ff734c;
 }
 
@@ -237,6 +237,8 @@ input {
   font-size: 23.25rpx;
   display: flex;
   justify-content: space-between;
+	flex-wrap: wrap;
+	/* justify-content: flex-start; */
   padding: 0 37.5rpx;
 }
 

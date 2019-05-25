@@ -6,9 +6,10 @@ Page({
 	 */
 	data: {
 		multiIndex: [0, 0, 0],
-		region: ['请选择：省','市','区'],
+		region: ['请选择：省', '市', '区'],
 		customItem: '请选择',
 		formData: {
+			id: '',
 			name: '',
 			tel: '',
 			province: '',
@@ -16,7 +17,7 @@ Page({
 			area: '',
 			street: '',
 			code: '',
-			isDefault: 0,
+			isDefault: 1,
 
 		}
 	},
@@ -24,9 +25,9 @@ Page({
 		let region = e.detail.value;
 		this.setData({
 			region,
-			'formData.province':region[0],
-			'formData.city':region[1],
-			'formData.area':region[2],
+			'formData.province': region[0],
+			'formData.city': region[1],
+			'formData.area': region[2],
 		})
 	},
 	nameInput(e) {
@@ -44,26 +45,34 @@ Page({
 			'formData.code': e.detail.value
 		})
 	},
-	streetInput(e){
+	streetInput(e) {
 		this.setData({
 			'formData.street': e.detail.value
 		})
 	},
-	saveHandle(){
+	checkboxChange(e) {
+		let flag = e.detail.value.length;
+		console.log(flag)
+		this.setData({
+			'formData.isDefault': flag
+		})
+	},
+	saveHandle() {
 		app.ajax({
-			method:'POST',
-			url:'/api/address/add',
-			data:{...this.data.formData}
-		}).then((res)=>{
-			if(res.status){
+			method: 'POST',
+			url: '/api/address/update',
+			data: { ...this.data.formData
+			}
+		}).then((res) => {
+			if (res.status) {
 				wx.showToast({
-					title:res.msg,
+					title: res.msg,
 					success() {
-						setTimeout(()=>{
+						setTimeout(() => {
 							wx.redirectTo({
-								url:'../IPAM/IPAM'
+								url: '../IPAM/IPAM'
 							})
-						},1500);
+						}, 1500);
 					}
 				});
 			}
@@ -73,7 +82,31 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function(options) {
+		let id = options.id;
 		console.log(options.id)
+		app.ajax({
+			method: 'GET',
+			url: '/api/address/detail',
+			data: {
+				id
+			}
+		}).then((res) => {
+			console.log(res)
+			this.setData({
+				'formData.id': id,
+				'formData.name': res.data.name,
+				'formData.tel': res.data.tel,
+				'formData.code': res.data.code,
+				'formData.province': res.data.province,
+				'formData.city': res.data.city,
+				'formData.street': res.data.street,
+				'formData.area': res.data.area,
+				'region[0]': res.data.province,
+				'region[1]': res.data.city,
+				'region[2]': res.data.area
+			})
+
+		})
 	},
 
 	/**
