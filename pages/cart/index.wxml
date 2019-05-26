@@ -23,10 +23,10 @@
 			</view>
 			<view class='li'>
 				<view class="add-del">
-					<text class="del" data-id='{{item.id}}'  data-price='{{item.price}}' data-num='{{item.goods_num}}' data-index='{{index}}' bindtap='decrease'>-
+					<text class="del" data-id='{{item.id}}'  data-index='{{index}}' bindtap='decrease'>-
 					</text>
 					<input type="text" name="" id="input-text" data-id='{{item.id}}' value="{{item.goods_num}}" placeholder="" />
-					<text class="add" data-id='{{item.id}}'  data-price='{{item.price}}' data-index='{{index}}'  data-gid='{{item.goods_id}}' data-num='{{item.goods_num}}'  bindtap='increase'>+
+					<text class="add" data-id='{{item.id}}' data-index='{{index}}'  data-gid='{{item.goods_id}}'  bindtap='increase'>+
 					</text>
 				</view>
 			</view>
