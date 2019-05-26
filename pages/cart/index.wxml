@@ -1,157 +1,55 @@
 <view class="product-wrap">
-	<view class="product">
+	<view class="product" wx:for='{{list}}' wx:key='{{item.id}}'>
 		<view class='ul'>
 			<view class='li'>
-				<label for="">
-					<input type="checkbox" name="checkbox" id="" value="" />
-					<text class="checkbtn"></text>
-				</label>
+				<checkbox-group bindchange="checkboxChange"  data-index='{{index}}' data-price='{{item.price}}' data-num='{{item.goods_num}}' >
+					<label>
+						<checkbox value="{{item.id}}" color='#FE6600' />
+					</label>
+				</checkbox-group>
 			</view>
 			<view class='li'>
 				<view class="info-wrap">
 					<view class="img-wrap">
 						<navigator url="../details/details.html">
-							<image src="/images/cart/9012038.jpg_220x240.jpg"></image>
+							<image src="http://localhost:3000/{{item.img}}"></image>
 						</navigator>
 					</view>
 					<view class="info">
-						<view class="title">[鲜花]依靠</view>
-						<view class="price">￥155</view>
+						<view class="title">[鲜花]{{item.name}}</view>
+						<view class="price">￥{{item.price}}</view>
 					</view>
 				</view>
 			</view>
 			<view class='li'>
 				<view class="add-del">
-					<text class="del">-</text>
-					<input type="text" name="" id="input-text" value="1" placeholder="1" />
-					<text class="add">+</text>
+					<text class="del" data-id='{{item.id}}'  data-price='{{item.price}}' data-num='{{item.goods_num}}' data-index='{{index}}' bindtap='decrease'>-
+					</text>
+					<input type="text" name="" id="input-text" data-id='{{item.id}}' value="{{item.goods_num}}" placeholder="" />
+					<text class="add" data-id='{{item.id}}'  data-price='{{item.price}}' data-index='{{index}}'  data-gid='{{item.goods_id}}' data-num='{{item.goods_num}}'  bindtap='increase'>+
+					</text>
 				</view>
 			</view>
 
 			<view class='li'>
-				<text class="delete">删除</text>
+				<view class="delete" bindtap='deleteModal' data-index='{{index}}' data-id='{{item.id}}'><i class="iconfont iconfont-delete"></i></view>
 			</view>
 		</view>
 	</view>
-	<view class="product">
-		<view class='ul'>
-			<view class='li'>
-				<label for="">
-					<input type="checkbox" name="checkbox" id="" value="" />
-					<text class="checkbtn"></text>
-				</label>
-			</view>
-			<view class='li'>
-				<view class="info-wrap">
-					<view class="img-wrap">
-						<image src="/images/cart/9012332.jpg_220x240.jpg"></image>
-					</view>
-					<view class="info">
-						<view class="title">[鲜花]妈妈的爱</view>
-						<view class="price">￥219</view>
-					</view>
-				</view>
-			</view>
-			<view class='li'>
-				<view class="add-del">
-					<text class="del">-</text>
-					<input type="text" name="" id="input-text" value="1" placeholder="1" />
-					<text class="add">+</text>
-				</view>
-			</view>
 
-			<view class='li'>
-				<text class="delete">删除</text>
-			</view>
-		</view>
-	</view>
-	<view class="product">
-		<view class='ul'>
-			<view class='li'>
-				<label for="">
-					<input type="checkbox" name="checkbox" id="" value="" />
-					<text class="checkbtn"></text>
-				</label>
-			</view>
-			<view class='li'>
-				<view class="info-wrap">
-					<view class="img-wrap">
-						<image src="/images/cart/9012096.jpg_220x240.jpg"></image>
-					</view>
-					<view class="info">
-						<view class="title">[鲜花]依靠</view>
-						<view class="price">￥355</view>
-					</view>
-				</view>
-			</view>
-			<view class='li'>
-				<view class="add-del">
-					<text class="del">-</text>
-					<input type="text" name="" id="input-text" value="1" />
-					<text class="add">+</text>
-				</view>
-			</view>
-
-			<view class='li'>
-				<text class="delete">删除</text>
-			</view>
-		</view>
-	</view>
-	<view class="product">
-		<view class='ul'>
-			<view class='li'>
-				<label for="">
-					<input type="checkbox" name="checkbox" id="" value="" />
-					<text class="checkbtn"></text>
-				</label>
-			</view>
-			<view class='li'>
-				<view class="info-wrap">
-					<view class="img-wrap">
-						<image src="/images/cart/9012413.jpg_220x240.jpg"></image>
-					</view>
-					<view class="info">
-						<view class="title">[鲜花]春分十里</view>
-						<view class="price">￥429</view>
-					</view>
-				</view>
-			</view>
-			<view class='li'>
-				<view class="add-del">
-					<text class="del">-</text>
-					<input type="text" name="" id="input-text" value="1" />
-					<text class="add">+</text>
-				</view>
-			</view>
-
-			<view class='li'>
-				<text class="delete">删除</text>
-			</view>
-		</view>
-	</view>
 </view>
 <view class="space"></view>
 <view class="bottom">
 	<view class="total">
 		<text>合计:</text>
-		<text class="sum">￥0</text>
+		<text class="sum">￥{{totalPrice}}</text>
 	</view>
 	<view class="payment">
 		<text>去结算(
 			<text class="pay-text">0</text>)</text>
 	</view>
 </view>
-<view class="pop-wrap">
-	<view class="box-pop">
-		<view class="text-botton-wrap">
-			<view class="text">确认删除此商品吗？</view>
-			<view class="button-wrap">
-				<button class="no">取消</button>
-				<button class="yes active">确认</button>
-			</view>
-		</view>
-	</view>
-</view>
+
 
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
  previous-margin="10rpx" display-multiple-items="4">

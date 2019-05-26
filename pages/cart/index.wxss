@@ -1,13 +1,3 @@
-.checkbtn {
-	width: 43.425rpx;
-	height: 43.425rpx;
-	background-position: center center;
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAwBJREFUaAXtmLGPElEQxkHYilhdx11jrtDWBmyMldXBnkZpjI3/gfYmxyX2Gv0DbIwNmngLVlbmGqCxleJiw2F1laECxO8j88yGLNzM3uaU5G2y2bdvZ34z3+zj7Xvkcv7wFfAV8BXwFfAV8BX4dxXIZxk6DMObk8nkXj6fvw3u9nw+L5OP+xEup7g/DoLgUxRF39ifxZGJgFqt9nA2m71AQteVSQ0KhcLzTqfzQWm/0uxCAur1+rXpdPoe9FsSYYhqH6HSn3E9KZVKrHxuPB6X0beLvj1c99G1I/bdYrH4qN1u/5B78yW1ACR/B8l/RMQtnCMkd4CE37Zardm6LBqNRgGCnkDIIew4xM4g4gFEfF3nt+pZKgGS/BdAA5wRxvVjjOtfq4Ik9eP3chW/l3d4FuKcQMTdNCKuJMHX9cmwYeUDVP11tVq9b02efPrQF803ZPFtks1nlsMsQMY8h01UqVSeNZvN35aAcVv6QsRTsnBuCTtucm7bNIRktmmBOsKwuZGm8kkZyXD6jmdlzE4Ny+xkegMyVXJeP8gqeQoii0y2XQy2NYdaAD9SAHKeH3K20cAtNsIcMobEUrmrBfALSyIqdXTeVKmKvGREJtnsdrGWTBJv1QIA5/Igx49UIimDTsd2sTRItQDAtgkE/EQDTmMTYy9iaRhqAajOYmHmlgcauNXGsV0sjb9agAaWlQ3exFzLUgsA9O/CTAu32nHRJz4/tb5qAQCeEorXu6uFW+1i7EUsjb9aAODHBOJN7GnAaWwc28XSMNQCuJMiEPB9Lok1cIsNmWTTx8XS+KsF4HPPbeAA5w7X8xq4xUaY3OgMJJbKXS2ANG4DeUWlDrkAYzuLgywyyXIxtFyTAFkldgEvczOC5bDJPykpMmRjwxmoa1mJkmdOgHtY+J3hDPv9/suLiKBvr9d7RRaZwkZTf5j2Aw77P20pUwmgEBGxmZv62JvY3L9VnAheN/aPrbgItrmT4mYEX9RL+2txOQd/7yvgK+Ar4CvgK+ArcJkV+ANocHhBqcRhdQAAAABJRU5ErkJggg==);
-	display: inline-block;
-	background-size: 100% 100%;
-
-}
-
 .img-wrap image {
 	width: 144.9rpx;
 	height: 153.97rpx;
@@ -31,11 +21,15 @@
 }
 
 .product .delete {
-	font-size: 15rpx;
+	font-size: 27rpx;
 	width: 50rpx;
 	height: 50rpx;
 	line-height: 50rpx;
 	text-align: center;
+}
+
+.product .delete i {
+	display: block;
 }
 
 .info-wrap {
@@ -50,10 +44,6 @@
 
 .product {
 	padding: 21.675rpx 28.95rpx 21.675rpx 18rpx;
-}
-
-.product input[type="checkbox"] {
-	display: none !important;
 }
 
 .info .price {
@@ -405,3 +395,14 @@ body {
 	width: 80rpx;
 	height: 87rpx;
 }
+
+checkbox .wx-checkbox-input{
+   border-radius: 50%;
+   width: 30rpx;
+   height: 30rpx;
+} 
+
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+ checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+	/* border: 1rpx solid #666; */
+ }

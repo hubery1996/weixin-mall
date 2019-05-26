@@ -127,16 +127,15 @@ swiper{
 
 .floor-1 .text {
 	position: relative;
-	width: 80;
+	width: 80vw;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-
 }
 
 .floor-1 .text::after {
 	position: absolute;
 	content: "";
-	height: 1px;
+	height: 1rpx;
 	width: 100%;
 	bottom: 0;
 	left: 0;
@@ -385,7 +384,9 @@ swiper{
 	margin-bottom: 95.1rpx;
 }
 
-.cart-bottom .ul .li navigator {
+.cart-bottom .ul .li navigator,
+ .cart-bottom .ul .li .add-cart{
+   text-align: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -408,7 +409,7 @@ swiper{
 }
 
 .cart-bottom .ul .li:last-child navigator,
-.cart-bottom .ul .li:nth-last-child(2) navigator {
+.cart-bottom .ul .li:nth-last-child(2) .add-cart {
 	flex: 2;
 	color: white;
 }
@@ -424,6 +425,21 @@ swiper{
 .cart-bottom .info {
 	text-align: center;
 	font-size: 27.15rpx;
+  position: relative;
+}
+.cart-bottom .info .cartNum{
+  width: 27.15rpx;
+  height: 27.15rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -6rpx;
+  right: -8rpx;
+  border: 1rpx solid#FF734C;
+  color: white;
+  background: #FF734C;
+  border-radius: 50%;
 }
 
 .cart-bottom .info .iconfont-sevice {
@@ -432,10 +448,10 @@ swiper{
 }
 .cart-bottom .info .iconfont-shopcart {
   display: block;
-  font-size: 12rpx;
+  font-size: 38.7rpx;
 }
-.cart-bottom .li navigator {
-	display: block;
+.cart-bottom .li navigator{
+   display: block;
 	width: 100%;
 	height: 100%;
 }
@@ -607,4 +623,7 @@ swiper{
 	z-index: 80;
 	background: rgba(35, 38, 40, 0.8);
 	display: none;
+}
+.head-photo .name{
+  font-size: 25.2rpx;
 }

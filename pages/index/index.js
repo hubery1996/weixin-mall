@@ -19,7 +19,7 @@ Page({
 		console.log(e.detail);
 		app.ajax({
 			method: 'POST',
-			url: '/api/user/info/upload/',
+			url: '/api/user/info/upload',
 			data: {
 				...e.detail
 			}

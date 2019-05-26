@@ -93,14 +93,7 @@ Page({
 		}).then((res) => {
 			console.log(res)
 			this.setData({
-				'formData.id': id,
-				'formData.name': res.data.name,
-				'formData.tel': res.data.tel,
-				'formData.code': res.data.code,
-				'formData.province': res.data.province,
-				'formData.city': res.data.city,
-				'formData.street': res.data.street,
-				'formData.area': res.data.area,
+				formData:{...res.data},
 				'region[0]': res.data.province,
 				'region[1]': res.data.city,
 				'region[2]': res.data.area

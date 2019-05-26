@@ -1,291 +1,192 @@
 <view class="hidden">
-  <view class='ul'>
-    <view class='li'>
-      <navigator url="../index/index.html">
-        <image src="/images/list/home_icon_new.png"></image>
-        <view class="text">首页</view>
-      </navigator>
-    </view>
-    <view class='li'>
-      <navigator url="#">
-        <image src="/images/list/classify_icon_new.png"></image>
-        <view class="text">分类</view>
-      </navigator>
-    </view>
-    <view class='li'>
-      <navigator url="#">
-        <image src="/images/list/cart_icon_new.png"></image>
-        <view class="text">购物车</view>
-      </navigator>
-    </view>
-    <view class='li'>
-      <navigator url="#">
-        <image src="/images/list/my_icon_new.png"></image>
-        <view class="text">我的</view>
-      </navigator>
-    </view>
-  </view>
+	<view class='ul'>
+		<view class='li'>
+			<navigator url="../index/index.html">
+				<image src="/images/list/home_icon_new.png"></image>
+				<view class="text">首页</view>
+			</navigator>
+		</view>
+		<view class='li'>
+			<navigator url="#">
+				<image src="/images/list/classify_icon_new.png"></image>
+				<view class="text">分类</view>
+			</navigator>
+		</view>
+		<view class='li'>
+			<navigator url="#">
+				<image src="/images/list/cart_icon_new.png"></image>
+				<view class="text">购物车</view>
+			</navigator>
+		</view>
+		<view class='li'>
+			<navigator url="#">
+				<image src="/images/list/my_icon_new.png"></image>
+				<view class="text">我的</view>
+			</navigator>
+		</view>
+	</view>
 </view>
 
 <view class="filter-wrap">
-  <view class="filter-back"></view>
-  <view class="filter">
-    <view class="title">
-      人群
-    </view>
-    <view class='ul'>
-      <view class='li'>
-        <navigator url="javascript:void(0)">送女友</navigator>
-      </view>
-      <view class='li'>
-        <navigator url=" javascript:void(0)">送男友</navigator>
-      </view>
-      <view class='li'>
-        <navigator url="javascript:void(0)">送朋友</navigator>
-      </view>
-      <view class='li'>
-        <navigator url="javascript:void(0)">送长辈</navigator>
-      </view>
-    </view>
-    <view class="title">
-      场合
-    </view>
-    <view class='ul'>
-      <view class='li'>
-        <navigator url="javascript:void(0)">爱情鲜花</navigator>
-      </view>
-      <view class='li'>
-        <navigator url=" javascript:void(0)">生日鲜花</navigator>
-      </view>
-      <view class='li'>
-        <navigator url="javascript:void(0)">探病慰问</navigator>
-      </view>
-      <view class='li'>
-        <navigator url="javascript:void(0)">商务鲜花</navigator>
-      </view>
-      <view class='li'>
-        <navigator url="javascript:void(0)">祝福庆祝</navigator>
-      </view>
-      <view class='li'>
-        <navigator url="javascript:void(0)">婚庆鲜花</navigator>
-      </view>
-      <view class='li'>
-        <navigator url="javascript:void(0)">道歉鲜花</navigator>
-      </view>
-      <view class='li'>
-        <navigator url="javascript:void(0)">哀思鲜花</navigator>
-      </view>
-    </view>
-    <view class="title">
-      花材
-    </view>
-    <view class='ul'>
-      <view class='li'>
-        <navigator url="javascript:void(0)">玫瑰</navigator>
-      </view>
-      <view class='li'>
-        <navigator url=" javascript:void(0)">百合</navigator>
-      </view>
-      <view class='li'>
-        <navigator url="javascript:void(0)">康乃馨</navigator>
-      </view>
-      <view class='li'>
-        <navigator url="javascript:void(0)">向日葵</navigator>
-      </view>
-      <view class='li'>
-        <navigator url="javascript:void(0)">扶郞</navigator>
-      </view>
-      <view class='li'>
-        <navigator url="javascript:void(0)">绣球</navigator>
-      </view>
-      <view class='li'>
-        <navigator url="javascript:void(0)">郁金香</navigator>
-      </view>
-    </view>
-    <view class="title">
-      类别
-    </view>
-    <view class='ul'>
-      <view class='li'>
-        <navigator url="javascript:void(0)">传情花束</navigator>
-      </view>
-      <view class='li'>
-        <navigator url=" javascript:void(0)">创意花盒</navigator>
-      </view>
-      <view class='li'>
-        <navigator url="javascript:void(0)">瓶插花</navigator>
-      </view>
-      <view class='li'>
-        <navigator url="javascript:void(0)">精致花篮</navigator>
-      </view>
-      <view class='li'>
-        <navigator url="javascript:void(0)">开业花篮</navigator>
-      </view>
+	<view class="filter-back"></view>
+	<view class="filter">
+		<view class="title">
+			人群
+		</view>
+		<view class='ul'>
+			<view class='li'>
+				<navigator url="javascript:void(0)">送女友</navigator>
+			</view>
+			<view class='li'>
+				<navigator url=" javascript:void(0)">送男友</navigator>
+			</view>
+			<view class='li'>
+				<navigator url="javascript:void(0)">送朋友</navigator>
+			</view>
+			<view class='li'>
+				<navigator url="javascript:void(0)">送长辈</navigator>
+			</view>
+		</view>
+		<view class="title">
+			场合
+		</view>
+		<view class='ul'>
+			<view class='li'>
+				<navigator url="javascript:void(0)">爱情鲜花</navigator>
+			</view>
+			<view class='li'>
+				<navigator url=" javascript:void(0)">生日鲜花</navigator>
+			</view>
+			<view class='li'>
+				<navigator url="javascript:void(0)">探病慰问</navigator>
+			</view>
+			<view class='li'>
+				<navigator url="javascript:void(0)">商务鲜花</navigator>
+			</view>
+			<view class='li'>
+				<navigator url="javascript:void(0)">祝福庆祝</navigator>
+			</view>
+			<view class='li'>
+				<navigator url="javascript:void(0)">婚庆鲜花</navigator>
+			</view>
+			<view class='li'>
+				<navigator url="javascript:void(0)">道歉鲜花</navigator>
+			</view>
+			<view class='li'>
+				<navigator url="javascript:void(0)">哀思鲜花</navigator>
+			</view>
+		</view>
+		<view class="title">
+			花材
+		</view>
+		<view class='ul'>
+			<view class='li'>
+				<navigator url="javascript:void(0)">玫瑰</navigator>
+			</view>
+			<view class='li'>
+				<navigator url=" javascript:void(0)">百合</navigator>
+			</view>
+			<view class='li'>
+				<navigator url="javascript:void(0)">康乃馨</navigator>
+			</view>
+			<view class='li'>
+				<navigator url="javascript:void(0)">向日葵</navigator>
+			</view>
+			<view class='li'>
+				<navigator url="javascript:void(0)">扶郞</navigator>
+			</view>
+			<view class='li'>
+				<navigator url="javascript:void(0)">绣球</navigator>
+			</view>
+			<view class='li'>
+				<navigator url="javascript:void(0)">郁金香</navigator>
+			</view>
+		</view>
+		<view class="title">
+			类别
+		</view>
+		<view class='ul'>
+			<view class='li'>
+				<navigator url="javascript:void(0)">传情花束</navigator>
+			</view>
+			<view class='li'>
+				<navigator url=" javascript:void(0)">创意花盒</navigator>
+			</view>
+			<view class='li'>
+				<navigator url="javascript:void(0)">瓶插花</navigator>
+			</view>
+			<view class='li'>
+				<navigator url="javascript:void(0)">精致花篮</navigator>
+			</view>
+			<view class='li'>
+				<navigator url="javascript:void(0)">开业花篮</navigator>
+			</view>
 
 
-    </view>
-    <view class="margin"></view>
-    <view class="filter-bottom">
-      清除选择
-    </view>
-  </view>
+		</view>
+		<view class="margin"></view>
+		<view class="filter-bottom">
+			清除选择
+		</view>
+	</view>
 </view>
 <view class="tab-title">
-  <view class='ul'>
-    <view class='li'>
-      <navigator url="#" class="on">综合</navigator>
-    </view>
-    <view class='li'>
-      <navigator url="#">销量</navigator>
-    </view>
-    <view class='li'>
-      <navigator url="#">价格
-        <i class="filter-item-price"></i>
-      </navigator>
-    </view>
-    <view class='li'>
-      <navigator url="#">新品</navigator>
-    </view>
-  </view>
+	<view class='ul'>
+		<view class='li'>
+			<navigator url="#" class="on">综合</navigator>
+		</view>
+		<view class='li'>
+			<navigator url="#">销量</navigator>
+		</view>
+		<view class='li'>
+			<navigator url="#">价格
+				<i class="filter-item-price"></i>
+			</navigator>
+		</view>
+		<view class='li'>
+			<navigator url="#">新品</navigator>
+		</view>
+	</view>
 </view>
 <view class="tab-sub-title">
-  <view class='ul'>
-    <view class='li'>
-      <navigator url="#">送女友</navigator>
-    </view>
-    <view class='li'>
-      <navigator url="#">送男友</navigator>
-    </view>
-    <view class='li'>
-      <navigator url="#">送朋友</navigator>
-    </view>
-    <view class='li'>
-      <navigator url="#">送长辈</navigator>
-    </view>
-    <view class="li filterBtn">
-      <navigator url="#">筛选
-        <i class="iconfont iconfont-triangle-down"></i>
-      </navigator>
-    </view>
-  </view>
+	<view class='ul'>
+		<view class='li'>
+			<navigator url="#">送女友</navigator>
+		</view>
+		<view class='li'>
+			<navigator url="#">送男友</navigator>
+		</view>
+		<view class='li'>
+			<navigator url="#">送朋友</navigator>
+		</view>
+		<view class='li'>
+			<navigator url="#">送长辈</navigator>
+		</view>
+		<view class="li filterBtn">
+			<navigator url="#">筛选
+				<i class="iconfont iconfont-triangle-down"></i>
+			</navigator>
+		</view>
+	</view>
 </view>
 <view class="col-wrap">
-  <view class="col">
-    <view class="item-wrap">
-      <image src="/images/list/9012222.jpg_220x240.jpg"></image>
-      <view class="info">
-        <span class="item-title">畅销爆款</span>
-        <view class="desc">雪山白玫瑰11枝、多头白百合3枝 </view>
-        <view class="price">￥ 296</view>
-      </view>
-    </view>
-    <view class="item-wrap">
-      <image src="/images/list/1073155.jpg_220x240.jpg"></image>
-      <view class="info">
-        <span class="item-title">畅销爆款</span>
-        <view class="desc"> 厄瓜多尔进口红色永生玫瑰2枝，进口白色永生玫瑰1枝，棉花2朵，粉色珍珠5颗 </view>
-        <view class="price">￥ 398</view>
-      </view>
-    </view>
-  </view>
-  <view class="col">
-    <view class="item-wrap">
-      <image src="/images/list/1073151.jpg_220x240.jpg"></image>
-      <view class="info">
-        <span class="item-title">畅销爆款</span>
-        <view class="desc">玫瑰11枝，粉色勿忘我0.3扎 </view>
-        <view class="price">￥ 138</view>
-      </view>
-    </view>
-    <view class="item-wrap">
-      <image src="/images/list/9012009.jpg_220x240.jpg"></image>
-      <view class="info">
-        <span class="item-title">畅销爆款</span>
-        <view class="desc"> 厄瓜多尔进口红色永生玫瑰2枝，进口白色永生玫瑰1枝，棉花2朵，粉色珍珠5颗 </view>
-        <view class="price">￥ 398</view>
-      </view>
-    </view>
-  </view>
-  <view class="col">
-    <view class="item-wrap">
-      <image src="/images/list/9010966.jpg_220x240.jpg"></image>
-      <view class="info">
-        <span class="item-title">畅销爆款</span>
-        <view class="desc">精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎</view>
-        <view class="price">￥ 242</view>
-      </view>
-    </view>
-    <view class="item-wrap">
-      <image src="/images/list/1060037.jpg_220x240.jpg"></image>
-      <view class="info">
-        <span class="item-title">畅销爆款</span>
-        <view class="desc">进口保鲜花，三色玫瑰系列，5年不凋谢 </view>
-        <view class="price">￥ 218</view>
-      </view>
-    </view>
-  </view>
-  <view class="col">
-    <view class="item-wrap">
-      <image src="/images/list/1060030.jpg_220x240.jpg"></image>
-      <view class="info">
-        <view class="title-desc">
-          <view class="item-titles">母爱·紫红色康乃馨</view>
-          <view class="desc">进口保鲜花，三色玫瑰系列，5年不凋谢 </view>
-        </view>
-        <view class="price">￥ 242</view>
-      </view>
-    </view>
-    <view class="item-wrap">
-      <image src="/images/list/9012177.jpg_220x240.jpg"></image>
-      <view class="info">
-        <span class="item-title">畅销爆款</span>
-        <view class="desc">99枝红玫瑰 </view>
-        <view class="price">￥ 693</view>
-      </view>
-    </view>
-  </view>
-  <view class="col">
-    <view class="item-wrap">
-      <image src="/images/list/8010065.jpg_220x240.jpg"></image>
-      <view class="info">
-        <span class="item-title">畅销爆款</span>
-        <view class="desc">两层花架</view>
-        <view class="price">￥ 389</view>
-      </view>
-    </view>
-    <view class="item-wrap">
-      <image src="/images/list/9010849.jpg_220x240.jpg"></image>
-      <view class="info">
-        <span class="item-title">畅销爆款</span>
-        <view class="desc">11枝红玫瑰,2枝多头白香水百合 </view>
-        <view class="price">￥ 199</view>
-      </view>
-    </view>
-  </view>
-  <view class="col">
-    <view class="item-wrap">
-      <image src="/images/list/9010966.jpg_220x240.jpg"></image>
-      <view class="info">
-        <span class="item-title">畅销爆款</span>
-        <view class="desc">精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎</view>
-        <view class="price">￥ 242</view>
-      </view>
-    </view>
-    <view class="item-wrap">
-      <image src="/images/list/1060037.jpg_220x240.jpg"></image>
-      <view class="info">
-        <span class="item-title">畅销爆款</span>
-        <view class="desc">进口保鲜花，三色玫瑰系列，5年不凋谢 </view>
-        <view class="price">￥ 218</view>
-      </view>
-    </view>
-  </view>
+	<view class="col">
+		<view class="item-wrap" wx:for="{{listItem}}" wx:key='{{item.id}}'>
+			<navigator url='../detail/detail?id={{item.id}}'>
+				<image src="http://localhost:3000/{{item.img_md}}"></image>
+				<view class="info">
+					<view class="holderHeight">
+						<text class="item-title span" wx:if="{{false}}"></text>
+						<view class="holder">{{item.name}}</view>
+						<view class="desc">{{item.hotPoint}} </view>
+					</view>
+					<view class="price">{{item.id}}￥ {{item.price}}</view>
+				</view>
+			</navigator>
+		</view>
+	</view>
 </view>
 <view class="more">
-  <navigator url="#">加载更多
-    <i class="iconfont iconfont-arrow-down"></i>
-  </navigator>
-</view>
-<view class="scroll-box">
-  <i class="iconfont iconfont-top"></i>
+	<navigator url="#">我们是有底线的
+	</navigator>
 </view>

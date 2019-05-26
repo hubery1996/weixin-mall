@@ -8,7 +8,7 @@ Page({
 	data: {
 		list: '',
 		list_2: '',
-		pId: ''
+		pId: '2'
 	},
 	geLevel_1() {
 		app.ajax({
@@ -18,14 +18,12 @@ Page({
 				pId: 1
 			}
 		}).then((res) => {
-			console.log(res.data);
 			this.setData({
 				list: res.data
 			})
 		})
 	},
 	geLevel_2() {
-		console.log(this.data.pId)
 		app.ajax({
 			method: 'GET',
 			url: '/api/category/sub',
@@ -33,9 +31,15 @@ Page({
 				pId: this.data.pId
 			}
 		}).then((res) => {
-			console.log(res.data);
+			// 后台数据乱序，通过id进行二次处理排序
+			var arr = res.data;
+			arr.sort(function(a,b){
+				let A = a.id;
+				let B = b.id;
+				return A - B;
+			})
 			this.setData({
-				list_2: res.data
+				list_2: arr
 			})
 		})
 	},
@@ -51,7 +55,7 @@ Page({
 	 */
 	onLoad: function(options) {
 		this.geLevel_1(),
-			this.geLevel_2()
+		this.geLevel_2()
 	},
 
 	/**
