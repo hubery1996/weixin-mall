@@ -2,7 +2,7 @@
 	<view class="product" wx:for='{{list}}' wx:key='{{item.id}}'>
 		<view class='ul'>
 			<view class='li'>
-				<checkbox-group bindchange="checkboxChange"  data-index='{{index}}' data-price='{{item.price}}' data-num='{{item.goods_num}}' >
+				<checkbox-group bindchange="checkboxChange" data-index='{{index}}' data-price='{{item.price}}' data-num='{{item.goods_num}}'>
 					<label>
 						<checkbox value="{{item.id}}" color='#FE6600' />
 					</label>
@@ -23,10 +23,10 @@
 			</view>
 			<view class='li'>
 				<view class="add-del">
-					<text class="del" data-id='{{item.id}}'  data-index='{{index}}' bindtap='decrease'>-
+					<text class="del" data-id='{{item.id}}' data-index='{{index}}' bindtap='decrease'>-
 					</text>
 					<input type="text" name="" id="input-text" data-id='{{item.id}}' value="{{item.goods_num}}" placeholder="" />
-					<text class="add" data-id='{{item.id}}' data-index='{{index}}'  data-gid='{{item.goods_id}}'  bindtap='increase'>+
+					<text class="add" data-id='{{item.id}}' data-index='{{index}}' data-gid='{{item.goods_id}}' bindtap='increase'>+
 					</text>
 				</view>
 			</view>
@@ -45,20 +45,23 @@
 		<text class="sum">￥{{totalPrice}}</text>
 	</view>
 	<view class="payment">
-		<text>去结算(
-			<text class="pay-text">0</text>)</text>
+		<view>去结算(<text class="pay-text">{{totalNum}}</text>)</view>
 	</view>
 </view>
 
-
+<view class="changeSwiper">
+	<view class="title">购买该商品的用户还购买了</view>
+	<view class="vertical">|</view>
+	<view class="title">巧克力/花瓶</view>
+</view>
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
- previous-margin="10rpx" display-multiple-items="4">
+ previous-margin="20rpx" display-multiple-items="4">
 	<block wx:for="{{swiper.info}}" wx:key="{{index}}">
-		<swiper-item>
+		<swiper-item data-id='{{item.id}}' data-index='{{index}}' bindtap='referralHamdle'>
 			<view class="imgWrap">
-				<image src="{{ item.url }}" class="slide-image" />
+				<image src="http://localhost:3000/{{ item.img_md }}" class="slide-image" />
 			</view>
-			<view class="title">{{item.title}}</view>
+			<view class="title">{{item.name}}</view>
 			<view class="price">{{item.price}}</view>
 		</swiper-item>
 	</block>

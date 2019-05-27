@@ -3,42 +3,7 @@ const app = getApp();
 Page({
 	data: {
 		swiper: {
-			info: [{
-				id: 1,
-				title: '天使之恋',
-				price: '￥138',
-				url: '/images/cart/3010005.jpg_80x87.jpg'
-			}, {
-				id: 2,
-				title: 'Be My Love',
-				price: '￥398',
-				url: '/images/cart/3010006.jpg_80x87.jpg'
-			}, {
-				id: 3,
-				title: '花漾蜜恋.姑娘与少年',
-				price: '￥298',
-				url: '/images/cart/3010006.jpg_80x87.jpg'
-			}, {
-				id: 4,
-				title: '柔情时光',
-				price: '￥3888',
-				url: '/images/cart/1207010.jpg_80x87.jpg'
-			}, {
-				id: 5,
-				title: '天使之恋',
-				price: '￥288',
-				url: '/images/cart/1207010.jpg_80x87.jpg'
-			}, {
-				id: 6,
-				title: '天使之恋',
-				price: '￥138',
-				url: '/images/cart/1207010.jpg_80x87.jpg'
-			}, {
-				id: 7,
-				title: '天使之恋',
-				price: '￥138',
-				url: '/images/cart/1207010.jpg_80x87.jpg'
-			}]
+			info: []
 		},
 		indicatorDots: false,
 		autoplay: false,
@@ -61,6 +26,47 @@ Page({
 				}
 				this.setData({
 					list: res.data,
+				})
+			}
+		})
+	},
+	// 获取推荐的商品，显示到页面
+	getReferral() {
+		app.ajax({
+			method: 'GET',
+			url: '/api/goods',
+			data: {
+				pageSize: 8,
+				pageIndex: 4
+			}
+		}).then((res) => {
+			this.setData({
+				'swiper.info': res.data
+			})
+		})
+	},
+	// 添加推荐的商品到购物车中
+	referralHamdle(e) {
+		let id = e.currentTarget.dataset.id;
+		let i = e.currentTarget.dataset.index;
+		app.ajax({
+			method: 'POST',
+			url: '/api/cart/add',
+			data: {
+				gid: id,
+				num: 1
+			}
+		}).then((res) => {
+			if (res.status) {
+				wx.showToast({
+					title: '加入购物车成功',
+					icon: 'success',
+					duration: 1500,
+					success: () => {
+						setTimeout(() => {
+							this.cartNum();
+						}, 1500);
+					},
 				})
 			}
 		})
@@ -192,9 +198,11 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function(options) {
+		// 获取购物车商品
 		this.cartNum();
+		// 获取推荐商品（暂时调用了获取商品列表接口）
+		this.getReferral();
 	},
-
 	/**
 	 * 生命周期函数--监听页面初次渲染完成
 	 */
