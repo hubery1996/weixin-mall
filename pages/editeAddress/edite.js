@@ -19,7 +19,8 @@ Page({
 			code: '',
 			isDefault: 1,
 
-		}
+		},
+		key: true
 	},
 	bindRegionChange(e) {
 		let region = e.detail.value;
@@ -34,21 +35,25 @@ Page({
 		this.setData({
 			'formData.name': e.detail.value
 		})
+		this.setPrev()
 	},
 	telInput(e) {
 		this.setData({
 			'formData.tel': e.detail.value
 		})
+		this.setPrev()
 	},
 	codeInput(e) {
 		this.setData({
 			'formData.code': e.detail.value
 		})
+		this.setPrev()
 	},
 	streetInput(e) {
 		this.setData({
 			'formData.street': e.detail.value
 		})
+		this.setPrev()
 	},
 	checkboxChange(e) {
 		let flag = e.detail.value.length;
@@ -56,6 +61,7 @@ Page({
 		this.setData({
 			'formData.isDefault': flag
 		})
+		this.setPrev()
 	},
 	saveHandle() {
 		app.ajax({
@@ -78,12 +84,50 @@ Page({
 			}
 		})
 	},
+	setPrev() {
+		let pages = getCurrentPages();
+		let currPage = null; //当前页面
+		let prevPage = null; //上一个页面
+
+		if (pages.length >= 2) {
+			currPage = pages[pages.length - 1]; //当前页面
+			prevPage = pages[pages.length - 2]; //上一个页面
+		}
+		let formData = this.data.formData;
+		console.log(formData);
+		if (prevPage) {
+			prevPage.setData({
+				'list[0]': formData
+			});
+			app.ajax({
+				method: 'POST',
+				url: '/api/address/update',
+				data: { ...this.data.formData
+				}
+			}).then((res) => {
+				if (res.status) {
+					console.log('已实时保存')
+				}
+			})
+
+		}
+	},
+	savePrev() {
+
+	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: function(options) {
+		// 参数key从订单页传过来，以控制编辑保存按钮的隐藏
+		if (options.key) {
+			let key = options.key;
+			let flagKey = !this.data.key;
+			this.setData({
+				key: flagKey
+			})
+		}
 		let id = options.id;
-		console.log(options.id)
 		app.ajax({
 			method: 'GET',
 			url: '/api/address/detail',
@@ -93,7 +137,8 @@ Page({
 		}).then((res) => {
 			console.log(res)
 			this.setData({
-				formData:{...res.data},
+				formData: { ...res.data
+				},
 				'region[0]': res.data.province,
 				'region[1]': res.data.city,
 				'region[2]': res.data.area
@@ -112,9 +157,7 @@ Page({
 	/**
 	 * 生命周期函数--监听页面显示
 	 */
-	onShow: function() {
-
-	},
+	onShow: function() {},
 
 	/**
 	 * 生命周期函数--监听页面隐藏

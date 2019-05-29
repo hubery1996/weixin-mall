@@ -11,7 +11,9 @@ Page({
 		duration: 1000,
 		list: '',
 		totalPrice: 0,
-		totalNum: 0
+		totalNum: 0,
+		idArr: [],
+		pageindex: 4
 
 	},
 	// 获取购物车里商品数量，显示到图标上
@@ -31,13 +33,21 @@ Page({
 		})
 	},
 	// 获取推荐的商品，显示到页面
-	getReferral() {
+	getReferral(e) {
+		// 点击标题切换轮播图内容通过ajax,get数据
+		if (e) {
+			let pageindex = e.target.dataset.pageindex;
+			pageindex = Number(pageindex)
+			this.setData({
+				pageindex: pageindex,
+			})
+		};
 		app.ajax({
 			method: 'GET',
 			url: '/api/goods',
 			data: {
 				pageSize: 8,
-				pageIndex: 4
+				pageIndex: this.data.pageindex
 			}
 		}).then((res) => {
 			this.setData({
@@ -193,6 +203,22 @@ Page({
 			list
 		})
 		this.contTotal()
+	},
+	// 提交订单
+	payHandle(e) {
+		let idArr = [];
+		let list = [...this.data.list]
+		for (let i = 0; i < list.length; i++) {
+			if (list[i].checked) {
+				idArr.push(list[i].goods_id);
+			}
+		}
+		this.setData({
+			idArr
+		})
+		wx.navigateTo({
+			url: '../order/order?idArr=' + idArr
+		})
 	},
 	/**
 	 * 生命周期函数--监听页面加载

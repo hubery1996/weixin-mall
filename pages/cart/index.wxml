@@ -44,15 +44,15 @@
 		<text>合计:</text>
 		<text class="sum">￥{{totalPrice}}</text>
 	</view>
-	<view class="payment">
+	<view bindtap='payHandle' class="payment">
 		<view>去结算(<text class="pay-text">{{totalNum}}</text>)</view>
 	</view>
 </view>
 
 <view class="changeSwiper">
-	<view class="title">购买该商品的用户还购买了</view>
+	<view class="title {{pageindex==3 ? 'active' : ''}}" data-pageIndex='3' bindtap='getReferral'>购买该商品的用户还购买了</view>
 	<view class="vertical">|</view>
-	<view class="title">巧克力/花瓶</view>
+	<view class="title {{pageindex==4 ? 'active':''}}" data-pageIndex='4' bindtap='getReferral'>巧克力/花瓶</view>
 </view>
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"
  previous-margin="20rpx" display-multiple-items="4">

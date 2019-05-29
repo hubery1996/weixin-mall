@@ -160,33 +160,35 @@
 		<view class="list1_title">
 			爱情鲜花推荐
 		</view>
-		<view class="list1_sub">
-			<view class="list1_sub_left">
-				<image src="/images/index/9012223.jpg"></image>
-			</view>
-			<view class="list1_sub_right">
-				<view class="list1_sub_right_t">
-					<view>一往情深</view>
-					<view>精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎</view>
-					<view>精品优选</view>
+		<navigator url="/pages/detail/detail">
+			<view class="list1_sub">
+				<view class="list1_sub_left">
+					<image src="/images/index/9012223.jpg"></image>
 				</view>
-				<view class="list1_sub_right_c">
-					<view>经典爆款，年销售冠军！</view>
-				</view>
-				<view class="list1_sub_right_b">
-					<view class="list1_sub_right_b_l">
-						<view class='new'>¥242
-							<text class='old'>¥315</text>
+				<view class="list1_sub_right">
+					<view class="list1_sub_right_t">
+						<view>一往情深</view>
+						<view>精品玫瑰礼盒:19枝红玫瑰，勿忘我0.1扎</view>
+						<view>精品优选</view>
+					</view>
+					<view class="list1_sub_right_c">
+						<view>经典爆款，年销售冠军！</view>
+					</view>
+					<view class="list1_sub_right_b">
+						<view class="list1_sub_right_b_l">
+							<view class='new'>¥242
+								<text class='old'>¥315</text>
+							</view>
+							<view class='solded'>已销售8.2万件</view>
 						</view>
-						<view class='solded'>已销售8.2万件</view>
-					</view>
-					<view class="list1_sub_right_b_r">
-						<i class="iconfont iconfont-buy"></i>
-					</view>
+						<view class="list1_sub_right_b_r">
+							<i class="iconfont iconfont-buy"></i>
+						</view>
 
+					</view>
 				</view>
 			</view>
-		</view>
+		</navigator>
 		<view class="list1_sub">
 			<view class="list1_sub_left">
 				<image src="/images/index/9012345.jpg"></image>

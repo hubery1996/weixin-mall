@@ -22,7 +22,7 @@
 				<navigator url="#"></navigator>
 			</view>
 			<view class="item-wrap">
-				<navigator url="../search/search.html" wx:for='{{list_2}}' wx:key='{{index}}'>
+				<navigator url="/pages/list/index" wx:for='{{list_2}}' wx:key='{{index}}'>
 					<image src="{{item.img}}" alt=""></image>
 						<view class="text">{{item.name}}</view>
 				</navigator>

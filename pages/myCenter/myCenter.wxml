@@ -20,27 +20,27 @@
 		<view class="head-title">
 
 			<view class="order">我的订单</view>
-			<navigator url="../myorder/myorder.html">
+			<navigator url="/pages/allOrders/orders">
 				<view class="all-order">全部订单<i class="iconfont iconfont-arrow-right"></i></view>
 			</navigator>
 		</view>
 		<view class="order-item">
 			<view class='ul'>
 				<view class='li'>
-					<navigator url="../myorder/myorder.html#non-payment/">
+					<navigator url="/pages/allOrders/orders?current=0">
 						<image src="/images/myCenter/myinfo_pendingpay.png" alt=""></image>
 							<view class="desc">代付款</view>
 					</navigator>
 				</view>
 
 				<view class='li'>
-					<navigator url="../myorder/myorder.html#non-payment/">
+					<navigator url="/pages/allOrders/orders?current=2">
 						<image src="/images/myCenter/myinfo_distribution.png" alt=""></image>
 							<view class="desc">今日配送</view>
 					</navigator>
 				</view>
 				<view class='li'>
-					<navigator url="../myorder/myorder.html#non-payment/">
+					<navigator url="/pages/allOrders/orders?current=3">
 						<image src="/images/myCenter/myinfo_evaluation.png" alt=""></image>
 							<view class="desc">待评价</view>
 					</navigator>

@@ -1,0 +1,96 @@
+<!-- 收货地址 -->
+<view class="site-info" wx:for='{{list}}' wx:key='{{index}}' bindtap='pagesHandle'>
+	<view class="info-left">
+		<view class="col-1">
+			<text class="name">{{item.name}}</text>
+			<text class="phone-num">{{item.tel}}</text>
+			<text class="default" wx:if="{{item.isDefault==1}}">默认</text>
+		</view>
+		<view class="col-2">
+			<text class="detail-adress">{{item.province}} {{item.city}} {{item.area}} {{item.street}}</text>
+		</view>
+	</view>
+	<view class="info-right">
+		<view class="arrow">
+			<i class="iconfont iconfont-arrow-right"></i>
+		</view>
+	</view>
+</view>
+<!-- 花边框 -->
+<view class="border"></view>
+<!-- 用户信息栏 -->
+<view class="user-info">
+	<view class='ul'>
+		<view class='li'>
+			<view class="title">预约送达日期</view>
+			<view class="section">
+				<picker mode="date" value="{{date}}" start="{{startDate}}" end="{{endData}}" bindchange="bindDateChange">
+					<view class="picker">
+						{{date}} <i class="iconfont iconfont-arrow-right"></i>
+					</view>
+				</picker>
+			</view>
+		</view>
+		<view class='li'>
+			<view class="section title flex">
+				<view class="title space">贺卡留言</view>
+				<input type="text" placeholder="填写即赠精美贺卡" />
+			</view>
+			<view class="input"><i class="iconfont iconfont-arrow-right"></i></view>
+		</view>
+	</view>
+	<view class='ul'>
+		<view class='li' bindtap='switchHandle'>
+			<view class="title">备注/优惠券/权益卡/发票</view>
+			<view class="input">请填写<view class="iconWrap"><i class="iconfont {{ switchFlag==true ? 'iconfont-arrow-right' : 'iconfont-arrow-down' }}"></i></view></view>
+		</view>
+		<view class="moreWrap" wx:if='{{switchFlag}}'>
+			<view class='li'>
+				<view class="title">优惠券</view>
+				<view class="input">无可用"><i class="iconfont iconfont-arrow-right"></i></view>
+			</view>
+			<view class='li'>
+				<view class="title">
+					<checkbox-group bindchange="checkboxChange">
+						<label class="checkbox">
+							<checkbox value="" checked="" />我要开发票
+						</label>
+					</checkbox-group>
+				</view>
+				<view class="input"><i class="iconfont iconfont-arrow-right"></i></view>
+			</view>
+			<view class='li'>
+				<view class="section title flex">
+					<view class="title space">备注</view>
+					<input maxlength="50" type="text" placeholder="限50字" />
+				</view>
+				<view class="input"></view>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="product-wraps" wx:for='{{good}}' wx:key='{{index}}'>
+	<view class="product-wrap box">
+		<view class="img-wrap">
+			<image src="http://localhost:3000/{{item.img_md}}"></image>
+		</view>
+		<view class="content">
+			<view class="title-wrap">
+				<view class="title">[鲜花]{{item.name}}</view>
+				<view class="price">￥{{item.price}}</view>
+			</view>
+
+			<view class="num">数量： x {{item.goods_num}}</view>
+		</view>
+	</view>
+</view>
+<view class="total">
+	<text class="text">商品总金额</text>
+	<view class="price">￥{{totalPrice}}</view>
+</view>
+<!-- 底部 -->
+<view class="bottom-cart">
+	<view class="left">合计<view class="price">￥{{totalPrice}}</view>
+	</view>
+	<view class="right" bindtap='createHandle'>微信支付</view>
+</view>

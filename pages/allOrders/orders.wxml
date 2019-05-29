@@ -1,0 +1,118 @@
+<view class="top-title">
+	<view class='ul'>
+		<view class="li {{current==0?'active':''}}" data-index='0' bindtap='changeSwiperItem'>
+			待付款
+		</view>
+		<view class="li {{current==1?'active':''}}" data-index='1' bindtap='changeSwiperItem'>
+			待发货
+		</view>
+		<view class="li {{current==2?'active':''}}" data-index='2' bindtap='changeSwiperItem'>
+			待收货
+		</view>
+		<view class="li {{current==3?'active':''}}" data-index='3' bindtap='changeSwiperItem'>
+			待评价
+		</view>
+	</view>
+</view>
+<swiper bindchange="swiperChange" current="{{current}}">
+	<block>
+		<swiper-item>
+			<view class="goods-wrap" wx:if='{{list.length? true:false}}' wx:for="{{list}}" wx:key="{{index}}">
+				<view class="head">
+					<view class="nums">订单号：{{item.id}}</view>
+					<view class="text">{{item.status}}</view>
+				</view>
+				<view class="content" wx:for="{{item.goodsList}}" wx:key="{{index}}">
+					<view class="info">
+						<image src="http://localhost:3000/{{item.img_md}}"></image>
+						<view class="title">[鲜花] {{item.name}}</view>
+					</view>
+				</view>
+				<view class="bottom">
+					<view class="box">合计：{{item.payment}}</view>
+					<view class="pay">去付款</view>
+				</view>
+			</view>
+			<view class="empty" wx:if='{{list.length? false:true}}'>
+				<view class="image"></view>
+				<view class="title">您还没有订单哦...</view>
+				<navigator url=''>去首页看看</navigator>
+			</view>
+		</swiper-item>
+	</block>
+	<block>
+		<swiper-item>
+			<view class="goods-wrap" wx:if='{{list.length? true:false}}' wx:for="{{list}}" wx:key="{{index}}">
+				<view class="head">
+					<view class="nums">订单号：{{item.id}}</view>
+					<view class="text">{{item.status}}</view>
+				</view>
+				<view class="content" wx:for="{{item.goodsList}}" wx:key="{{index}}">
+					<view class="info">
+						<image src="http://localhost:3000/{{item.img_md}}"></image>
+						<view class="title">[鲜花] {{item.name}}</view>
+					</view>
+				</view>
+				<view class="bottom">
+					<view class="box">合计：{{item.payment}}</view>
+					<view class="pay">去付款</view>
+				</view>
+			</view>
+			<view class="empty" wx:if='{{list.length? false:true}}'>
+				<view class="image"></view>
+				<view class="title">您还没有订单哦...</view>
+				<navigator url=''>去首页看看</navigator>
+			</view>
+		</swiper-item>
+	</block>
+	<block>
+		<swiper-item>
+			<view class="goods-wrap" wx:if='{{list.length? true:false}}' wx:for="{{list}}" wx:key="{{index}}">
+				<view class="head">
+					<view class="nums">订单号：{{item.id}}</view>
+					<view class="text">{{item.status}}</view>
+				</view>
+				<view class="content" wx:for="{{item.goodsList}}" wx:key="{{index}}">
+					<view class="info">
+						<image src="http://localhost:3000/{{item.img_md}}"></image>
+						<view class="title">[鲜花] {{item.name}}</view>
+					</view>
+				</view>
+				<view class="bottom">
+					<view class="box">合计：{{item.payment}}</view>
+					<view class="pay">去付款</view>
+				</view>
+			</view>
+			<view class="empty" wx:if='{{list.length? false:true}}'>
+				<view class="image"></view>
+				<view class="title">您还没有订单哦...</view>
+				<navigator url=''>去首页看看</navigator>
+			</view>
+		</swiper-item>
+	</block>
+	<block>
+		<swiper-item>
+			<view class="goods-wrap" wx:if='{{list.length? true:false}}' wx:for="{{list}}" wx:key="{{index}}">
+				<view class="head">
+					<view class="nums">订单号：{{item.id}}</view>
+					<view class="text">{{item.status}}</view>
+				</view>
+				<view class="content" wx:for="{{item.goodsList}}" wx:key="{{index}}">
+					<view class="info">
+						<image src="http://localhost:3000/{{item.img_md}}"></image>
+						<view class="title">[鲜花] {{item.name}}</view>
+					</view>
+				</view>
+				<view class="bottom">
+					<view class="box">合计：{{item.payment}}</view>
+					<view class="pay">去付款</view>
+				</view>
+			</view>
+			<view class="empty" wx:if='{{list.length? false:true}}'>
+				<view class="image"></view>
+				<view class="title">您还没有订单哦...</view>
+				<navigator url=''>去首页看看</navigator>
+			</view>
+		</swiper-item>
+	</block>
+</swiper>

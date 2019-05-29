@@ -1,55 +1,56 @@
 {
-  "pages": [
-    "pages/cart/index",
-    "pages/list/index",
-    "pages/index/index",
-    "pages/detail/detail",
-    "pages/category/index",
-    "pages/address/address",
-    "pages/IPAM/IPAM",
-    "pages/editeAddress/edite",
-    "pages/myCenter/myCenter",
-    "pages/text/index",
-    "pages/user/index",
-    "pages/navi/index",
-    "components/Auth-Model/index"
-    
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "花礼网",
-    "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "color": "#333",
-    "selectedColor": "#ff464e",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "iconPath": "images/icons/home.png",
-        "selectedIconPath": "images/icons/home-s.png",
-        "text": "首页"
-      },
-      {
-        "pagePath": "pages/category/index",
-        "iconPath": "images/icons/category.png",
-        "selectedIconPath": "images/icons/category-s.png",
-        "text": "分类"
-      },
-      {
-        "pagePath": "pages/cart/index",
-        "iconPath": "images/icons/cart.png",
-        "selectedIconPath": "images/icons/cart-s.png",
-        "text": "购物车"
-      },
-      {
-        "pagePath": "pages/myCenter/myCenter",
-        "iconPath": "images/icons/user.png",
-        "selectedIconPath": "images/icons/user-s.png",
-        "text": "我的"
-      }
-    ]
-  },
-  "sitemapLocation": "sitemap.json"
+	"pages": [
+		"pages/cart/index",
+		"pages/order/order",
+		"pages/list/index",
+		"pages/allOrders/orders",
+		"pages/index/index",
+		"pages/myCenter/myCenter",
+		"pages/IPAM/IPAM",
+		"pages/detail/detail",
+		"pages/category/index",
+		"pages/address/address",
+		"pages/editeAddress/edite",
+		"pages/text/index",
+		"pages/user/index",
+		"pages/navi/index",
+		"components/Auth-Model/index"
+
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "花礼网",
+		"navigationBarTextStyle": "black"
+	},
+	"tabBar": {
+		"color": "#333",
+		"selectedColor": "#ff464e",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "images/icons/home.png",
+				"selectedIconPath": "images/icons/home-s.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/category/index",
+				"iconPath": "images/icons/category.png",
+				"selectedIconPath": "images/icons/category-s.png",
+				"text": "分类"
+			},
+			{
+				"pagePath": "pages/cart/index",
+				"iconPath": "images/icons/cart.png",
+				"selectedIconPath": "images/icons/cart-s.png",
+				"text": "购物车"
+			},
+			{
+				"pagePath": "pages/myCenter/myCenter",
+				"iconPath": "images/icons/user.png",
+				"selectedIconPath": "images/icons/user-s.png",
+				"text": "我的"
+			}
+		]
+	},
+	"sitemapLocation": "sitemap.json"
 }
