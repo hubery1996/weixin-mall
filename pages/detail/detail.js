@@ -60,6 +60,29 @@ Page({
 
 		})
 	},
+	// 立即购买
+	payNowHandle() {
+		// 因为接口设计为购物车到确认订单流程，
+		// 所以立即购买按钮点击后也做了一次加入购物车
+		app.ajax({
+			method: 'POST',
+			url: '/api/cart/add',
+			data: {
+				gid: this.data.gid,
+				num: 1
+			}
+		}).then((res) => {
+			if (res.status) {
+				let gid = this.data.gid;
+				let idArr = [];
+				idArr.push(gid);
+				wx.navigateTo({
+					url: '../order/order?idArr=' + idArr
+				})
+			}
+		})
+
+	},
 	/**
 	 * 生命周期函数--监听页面加载
 	 */

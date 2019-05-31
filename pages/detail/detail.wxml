@@ -295,10 +295,8 @@
 		<view class='li' bindtap='addCartHandle'>
 			<view class="add-cart">加入购物车</view>
 		</view>
-		<view class='li'>
-			<navigator url="../order/order.html">
+		<view class='li' bindtap='payNowHandle'>
 				<view class="pay-now">立即购买</view>
-			</navigator>
 		</view>
 	</view>
 </view>

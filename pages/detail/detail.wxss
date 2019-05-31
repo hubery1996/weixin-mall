@@ -385,12 +385,14 @@ swiper{
 }
 
 .cart-bottom .ul .li navigator,
- .cart-bottom .ul .li .add-cart{
+ .cart-bottom .ul .li .add-cart,
+ .cart-bottom .ul .li .pay-now{
    text-align: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
+ 
 
 .cart-bottom .ul .li:first-child {
 	position: relative;
@@ -409,13 +411,15 @@ swiper{
 }
 
 .cart-bottom .ul .li:last-child navigator,
-.cart-bottom .ul .li:nth-last-child(2) .add-cart {
+.cart-bottom .ul .li:nth-last-child(2) .add-cart{
 	flex: 2;
 	color: white;
 }
 
 .cart-bottom .ul .li:last-child {
 	background: #FF734C;
+  display: flex;
+  justify-content: center;
 }
 
 .cart-bottom .ul .li:nth-last-child(2) {
